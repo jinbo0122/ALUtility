@@ -8,6 +8,9 @@
 
 #import "UIButton+ALExtension.h"
 #import <objc/runtime.h>
+#import "UIView+ALExtension.h"
+#import "UIColor+ALExtension.h"
+#import "UILabel+ALExtension.h"
 static char UIButtonALExtensionTagString;
 static char UIButtonALExtensionCustomImageView;
 static char UIButtonALExtensionCustomTitleLabel;

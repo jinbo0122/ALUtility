@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/albert_leee'
 
   s.ios.deployment_target = '10.0'
-
+  s.prefix_header_contents = '#import "ALExtension.h"'
   s.source_files = 'ALUtility/Classes/**/*.{h,m}'
   
   # s.resource_bundles = {
@@ -35,6 +35,6 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit', 'Photos', 'CoreGraphics', 'ImageIO', 'AssetsLibrary', 'Security', 'QuartzCore', 'Foundation', 'SystemConfiguration', 'AVFoundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

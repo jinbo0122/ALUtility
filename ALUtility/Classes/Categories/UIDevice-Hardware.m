@@ -12,7 +12,7 @@
 #include <net/if_dl.h>
 
 #import "UIDevice-Hardware.h"
-
+#import "NSArray+ALExtension.h"
 @implementation UIDevice (Hardware)
 /*
  Platforms

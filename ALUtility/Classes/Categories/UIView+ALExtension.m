@@ -9,7 +9,7 @@
 #import "UIView+ALExtension.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
-
+#import "UIColor+ALExtension.h"
 #define kAnimationDidStopNotification              @"kAnimationDidStopNotification"
 
 #define kAnimationDidStartNotification              @"kAnimationDidStartNotification"

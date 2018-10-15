@@ -7,7 +7,7 @@
 //
 
 #import "UINavigationItemAdditions.h"
-
+#import "NSArray+ALExtension.h"
 @implementation UINavigationItem (Additions)
 
 - (void)updateLeftBarButtonItem:(UIBarButtonItem *)item{

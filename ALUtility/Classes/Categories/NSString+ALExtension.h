@@ -12,8 +12,6 @@
 typedef void(^COMPLETION_BLOCK_FilePath)(NSString *filePath, NSString *imgfilePath);
 @interface NSString (ALExtension)
 + (NSString*)timeString:(NSTimeInterval)time;
-+ (NSString*)timeString:(NSString *)unixTime format:(MHPrettyDateFormat)format;
-+ (NSString*)time:(NSTimeInterval)unixTime format:(MHPrettyDateFormat)format;
 + (NSString *)calendarWithWeekday:(NSTimeInterval)unixTime;
 + (NSString *)calendarString:(NSTimeInterval)unixTime;
 + (NSString *)timeStringFromSec:(int)sec;

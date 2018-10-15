@@ -7,7 +7,7 @@
 //
 
 #import "NSData+ALExtension.h"
-
+#import <CommonCrypto/CommonDigest.h>
 @implementation NSData (ALExtension)
 #pragma mark Image Related
 - (NSString *)detectImageSuffix

@@ -17,10 +17,8 @@
 		4B3F40FA21748FA000708828 /* ALLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3F40F221748FA000708828 /* ALLineView.h */; };
 		4B3F40FB21748FA000708828 /* ALReceiveHitTestSubView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3F40F321748FA000708828 /* ALReceiveHitTestSubView.h */; };
 		4B3F40FC21748FA000708828 /* ALAutoScrollLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3F40F421748FA000708828 /* ALAutoScrollLabel.h */; };
-		4B3F40FD21748FA000708828 /* ALPhotoListFullView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3F40F521748FA000708828 /* ALPhotoListFullView.h */; };
 		4B3F40FE21748FA000708828 /* ALReceiveHitTestSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F40F621748FA000708828 /* ALReceiveHitTestSubView.m */; };
 		4B3F40FF21748FA000708828 /* ALLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F40F721748FA000708828 /* ALLineView.m */; };
-		4B3F410021748FA000708828 /* ALPhotoListFullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F40F821748FA000708828 /* ALPhotoListFullView.m */; };
 		4B3F410121748FA000708828 /* ALAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F40F921748FA000708828 /* ALAutoScrollLabel.m */; };
 		4B3F413021748FD500708828 /* ALUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F410321748FD500708828 /* ALUtility.m */; };
 		4B3F413121748FD500708828 /* UIResponder+KeyboardCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3F410521748FD500708828 /* UIResponder+KeyboardCache.h */; };
@@ -107,10 +105,8 @@
 		4B3F40F221748FA000708828 /* ALLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALLineView.h; sourceTree = "<group>"; };
 		4B3F40F321748FA000708828 /* ALReceiveHitTestSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALReceiveHitTestSubView.h; sourceTree = "<group>"; };
 		4B3F40F421748FA000708828 /* ALAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAutoScrollLabel.h; sourceTree = "<group>"; };
-		4B3F40F521748FA000708828 /* ALPhotoListFullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPhotoListFullView.h; sourceTree = "<group>"; };
 		4B3F40F621748FA000708828 /* ALReceiveHitTestSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALReceiveHitTestSubView.m; sourceTree = "<group>"; };
 		4B3F40F721748FA000708828 /* ALLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALLineView.m; sourceTree = "<group>"; };
-		4B3F40F821748FA000708828 /* ALPhotoListFullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPhotoListFullView.m; sourceTree = "<group>"; };
 		4B3F40F921748FA000708828 /* ALAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAutoScrollLabel.m; sourceTree = "<group>"; };
 		4B3F410321748FD500708828 /* ALUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUtility.m; sourceTree = "<group>"; };
 		4B3F410521748FD500708828 /* UIResponder+KeyboardCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+KeyboardCache.h"; sourceTree = "<group>"; };
@@ -158,6 +154,7 @@
 		4B3F415B2174907300708828 /* UIView+SubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SubView.h"; sourceTree = "<group>"; };
 		4B3F415C2174907300708828 /* UITableView+NoDataNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NoDataNotice.h"; sourceTree = "<group>"; };
 		4B3F415D2174907300708828 /* UIView+SubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SubView.m"; sourceTree = "<group>"; };
+		4B3F4164217499F300708828 /* ALExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALExtension.h; sourceTree = "<group>"; };
 		5970797C6CF3A403BC692DDFAB7DB70D /* ALUtility.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALUtility.xcconfig; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5A4AED1ABB6F45EA881160CE3EA60DDE /* Pods-ALUtility_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ALUtility_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -264,10 +261,9 @@
 				4B3F40F921748FA000708828 /* ALAutoScrollLabel.m */,
 				4B3F40F221748FA000708828 /* ALLineView.h */,
 				4B3F40F721748FA000708828 /* ALLineView.m */,
-				4B3F40F521748FA000708828 /* ALPhotoListFullView.h */,
-				4B3F40F821748FA000708828 /* ALPhotoListFullView.m */,
 				4B3F40F321748FA000708828 /* ALReceiveHitTestSubView.h */,
 				4B3F40F621748FA000708828 /* ALReceiveHitTestSubView.m */,
+				4B3F4164217499F300708828 /* ALExtension.h */,
 			);
 			path = Subs;
 			sourceTree = "<group>";
@@ -466,7 +462,6 @@
 				4B3F415F2174907300708828 /* UIView+SubView.h in Headers */,
 				4B3F413D21748FD500708828 /* UIDevice+Resolutions.h in Headers */,
 				5D2FF6EEDD6A0DB21D3321DFA9C5404F /* ALUtility-umbrella.h in Headers */,
-				4B3F40FD21748FA000708828 /* ALPhotoListFullView.h in Headers */,
 				4B3F414421748FD500708828 /* UIView+ALExtension.h in Headers */,
 				4B3F415721748FD500708828 /* NSUserDefaults+ALExtension.h in Headers */,
 				4B3F413421748FD500708828 /* UINavigationController+ALExtension.h in Headers */,
@@ -583,7 +578,6 @@
 				4B3F413221748FD500708828 /* UIDevice+Resolutions.m in Sources */,
 				4B3F413621748FD500708828 /* UIDevice-Hardware.m in Sources */,
 				4B3F415121748FD500708828 /* ALKeyChain.m in Sources */,
-				4B3F410021748FA000708828 /* ALPhotoListFullView.m in Sources */,
 				4B3F414D21748FD500708828 /* NSString+ALExtension.m in Sources */,
 				4B3F413A21748FD500708828 /* UISegmentedControl+ALExtension.m in Sources */,
 				4B3F413821748FD500708828 /* UIBarButtonItem+ALExtension.m in Sources */,

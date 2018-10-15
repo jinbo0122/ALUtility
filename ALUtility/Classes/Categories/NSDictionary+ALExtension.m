@@ -237,7 +237,7 @@
   NSString * documentsDirectory = [paths objectAtIndex:0];
   NSString * path = [[documentsDirectory stringByAppendingPathComponent:@"Caches"] stringByAppendingPathComponent:filename];
   BOOL result = [[[NSFileManager alloc] init] removeItemAtPath:path error:nil];
-  ALLogVerbose(@"%@",result?@"sucess":@"fail");
+  NSLog(@"%@",result?@"sucess":@"fail");
 }
 
 - (id)safeObjectForKey:(NSString*)key{

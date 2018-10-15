@@ -11,6 +11,8 @@
 #import <float.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
+#import "UIView+ALExtension.h"
+#import "UIDevice-Hardware.h"
 @implementation UIImage (ALExtension)
 - (UIImage *)applyLightEffectWithBlur:(NSInteger)blur
 {
@@ -22,15 +24,15 @@
 {
   // Check pre-conditions.
   if (self.size.width < 1 || self.size.height < 1) {
-    ALLogVerbose(@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
+    NSLog(@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
     return nil;
   }
   if (!self.CGImage) {
-    ALLogVerbose (@"*** error: image must be backed by a CGImage: %@", self);
+    NSLog (@"*** error: image must be backed by a CGImage: %@", self);
     return nil;
   }
   if (maskImage && !maskImage.CGImage) {
-    ALLogVerbose (@"*** error: maskImage must be backed by a CGImage: %@", maskImage);
+    NSLog (@"*** error: maskImage must be backed by a CGImage: %@", maskImage);
     return nil;
   }
   
@@ -193,7 +195,7 @@
   }
   totalLuminance /= height*width;
   totalLuminance /= 255.0;
-  ALLogVerbose(@"Searched image luminance = %f",totalLuminance);
+  NSLog(@"Searched image luminance = %f",totalLuminance);
   
   return totalLuminance;
 }
@@ -225,7 +227,7 @@
   }
   totalLuminance /= height*width;
   totalLuminance /= 255.0;
-  ALLogVerbose(@"Searched image luminance = %f",totalLuminance);
+  NSLog(@"Searched image luminance = %f",totalLuminance);
   
   return totalLuminance;
 }
@@ -863,11 +865,6 @@ static CGRect swapWidthAndHeight(CGRect rect)
                                   withInputParameters: @{kCIInputSaturationKey : @0.0}];
   return [UIImage imageWithCIImage:grayscale];
   
-}
-
-#pragma mark Image Cache
-+ (void)clearImageMemoryCache{
-  [[ALImageCache sharedImageCache] setValue:nil forKey:@"memCache"];
 }
 
 // 截屏函数

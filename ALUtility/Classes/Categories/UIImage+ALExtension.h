@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Accelerate/Accelerate.h>
+#import "../Subs/ALUtility.h"
 @interface UIImage (ALExtension)
 - (UIImage *)applyLightEffectWithBlur:(NSInteger)blur;
 - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
@@ -32,7 +33,6 @@
               image:(UIImage *)image
            videoUrl:(NSURL *)videoUrl;
 - (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
-+ (void)clearImageMemoryCache;
 - (UIImage *)rotate:(UIDeviceOrientation)orientation needMirror:(BOOL)needMirror;
 + (void)setLatestPhotoPreviewFromAlbumWithSender:(UIView *)sender;
 + (UIImage*)imageWithNewSize:(UIImage*)sourceImage scaledToSize:(CGSize)targetSize;
