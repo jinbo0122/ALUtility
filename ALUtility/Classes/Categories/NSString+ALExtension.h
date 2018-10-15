@@ -16,8 +16,6 @@ typedef void(^COMPLETION_BLOCK_FilePath)(NSString *filePath, NSString *imgfilePa
 + (NSString *)calendarString:(NSTimeInterval)unixTime;
 + (NSString *)timeStringFromSec:(int)sec;
 + (NSString *)stringByMD5Encoding:(NSString*)inputString;
-+ (NSString *)stringByDecodingURLFormat:(NSString*)inputString;
-+ (NSString *)stringByEncodingURLFormat:(NSString*)inputString;
 + (NSString *)pathByCacheDirection:(NSString*)customCacheDirectionName;
 - (BOOL)containsTraditionalChinese;
 - (NSString *)trimWhitespace;

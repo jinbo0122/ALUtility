@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ALUtility'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Project Starter for personal usage.'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jinbo0122' => 'albert_leee@me.com' }
-  s.source           = { :git => 'https://github.com/jinbo0122/ALUtility.git', :tag => '0.1.0', :commit => "cdce20ff97d01971c03979789d79d55064830ef7" }
+  s.source           = { :git => 'https://github.com/jinbo0122/ALUtility.git', :tag => s.version.to_s, :commit => "cdce20ff97d01971c03979789d79d55064830ef7" }
   # s.social_media_url = 'https://twitter.com/albert_leee'
 
   s.ios.deployment_target = '10.0'

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44A74CC66473AB9E1E1624A4 /* Pods_ALUtility_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CCB701866010EDDBC06091 /* Pods_ALUtility_Example.framework */; };
+		4B3F416621749F2100708828 /* ALUtility.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F416521749F2000708828 /* ALUtility.podspec */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C1D827AA62C89E2799F8948 /* ALUtility.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ALUtility.podspec; path = ../ALUtility.podspec; sourceTree = "<group>"; };
 		2DB8456E773AFE217F1E9859 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		30DDF8CB7356B6799D2C2D31 /* Pods_ALUtility_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALUtility_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3F416521749F2000708828 /* ALUtility.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ALUtility.podspec; path = ../../ALUtility.podspec; sourceTree = "<group>"; };
 		50BA12C6149606CE93F7611A /* Pods-ALUtility_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALUtility_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALUtility_Tests/Pods-ALUtility_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ALUtility_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALUtility_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,7 +190,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				1C1D827AA62C89E2799F8948 /* ALUtility.podspec */,
+				4B3F416521749F2000708828 /* ALUtility.podspec */,
 				6888188FB6BFD417845C529D /* README.md */,
 				2DB8456E773AFE217F1E9859 /* LICENSE */,
 			);
@@ -283,6 +284,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				4B3F416621749F2100708828 /* ALUtility.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Accelerate/Accelerate.h>
-#import "../Subs/ALUtility.h"
+#import "ALUtility.h"
 @interface UIImage (ALExtension)
 - (UIImage *)applyLightEffectWithBlur:(NSInteger)blur;
 - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;

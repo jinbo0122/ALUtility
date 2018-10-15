@@ -111,32 +111,6 @@
           ];
 }
 #pragma mark URL String Encoding & Decoding
-+ (NSString *)stringByDecodingURLFormat:(NSString*)inputString
-{
-  CFStringRef decodedCFString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-                                                                                        (__bridge CFStringRef)inputString,
-                                                                                        CFSTR(""),
-                                                                                        kCFStringEncodingUTF8);
-  if (decodedCFString == nil) {
-    return inputString;
-  }
-  // We need to replace "+" with " " because the CF method above doesn't do it
-  NSString *decodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) decodedCFString];
-  return (!decodedString) ? @"" : [decodedString stringByReplacingOccurrencesOfString:@"+" withString:@" "];
-}
-+ (NSString*)stringByEncodingURLFormat:(NSString*)inputString
-{
-  if ([inputString length]==0) {
-    return @"";
-  }
-  NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                           (CFStringRef)inputString,
-                                                                                           NULL,
-                                                                                           CFSTR("!*'();:@&=+$,/?%#[]"),
-                                                                                           kCFStringEncodingUTF8));
-  return result;
-}
-
 - (NSNumber *)numberValue{
   NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
   [f setNumberStyle:NSNumberFormatterDecimalStyle];
