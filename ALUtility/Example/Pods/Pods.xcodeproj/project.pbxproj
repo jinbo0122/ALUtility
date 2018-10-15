@@ -154,7 +154,7 @@
 		4B3F415C2174907300708828 /* UITableView+NoDataNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NoDataNotice.h"; sourceTree = "<group>"; };
 		4B3F415D2174907300708828 /* UIView+SubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SubView.m"; sourceTree = "<group>"; };
 		4B3F4164217499F300708828 /* ALExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALExtension.h; sourceTree = "<group>"; };
-		4B3F416721749F2E00708828 /* ALUtility.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ALUtility.podspec; path = ../ALUtility.podspec; sourceTree = "<group>"; };
+		4B3F41692174A1A700708828 /* ALUtility.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ALUtility.podspec; path = ../ALUtility.podspec; sourceTree = "<group>"; };
 		5970797C6CF3A403BC692DDFAB7DB70D /* ALUtility.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALUtility.xcconfig; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5A4AED1ABB6F45EA881160CE3EA60DDE /* Pods-ALUtility_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ALUtility_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -230,8 +230,8 @@
 		3A1C7C9EF6147A1470A8FE391E62F26D /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4B3F416721749F2E00708828 /* ALUtility.podspec */,
 				B409B752E9E937B6B372B94AB2775E92 /* LICENSE */,
+				4B3F41692174A1A700708828 /* ALUtility.podspec */,
 				6F2C6AB147BDD9AFC552F280241C5660 /* README.md */,
 			);
 			name = Pod;
