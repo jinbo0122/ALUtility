@@ -1,0 +1,6 @@
+framework module ALUtility {
+  umbrella header "ALUtility-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - ALUtility (0.1.0)
+
+DEPENDENCIES:
+  - ALUtility (from `../`)
+
+EXTERNAL SOURCES:
+  ALUtility:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ALUtility: 0239c2541095dfbb60f1dbb3c4f5a54f236b948c
+
+PODFILE CHECKSUM: f446279769ad0b42d5208cea9f3d1e88ef09fd1c
+
+COCOAPODS: 1.5.3

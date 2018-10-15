@@ -1,0 +1,22 @@
+{
+  "name": "ALUtility",
+  "version": "0.1.0",
+  "summary": "A short description of ALUtility.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jinbo0122/ALUtility",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jinbo0122": "albert_leee@me.com"
+  },
+  "source": {
+    "git": "https://github.com/jinbo0122/ALUtility.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ALUtility/Classes/**/*"
+}
