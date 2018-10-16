@@ -26,6 +26,9 @@
 #define ALNoneWifiImageMessageBig       @"!imbigss"
 #define ALNoneWifiImageGroupBg          @"!gbbig"
 
+#define ALBackBarButtonArrowRect        CGRectMake(-5, 13, 12, 18)
+#define ALBackBarButtonArrowResource    @"icon_back"
+
 #define isIphoneDevice (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
 #define KIpadZoomScale (isIphoneDevice? 1: 1.5)
 
