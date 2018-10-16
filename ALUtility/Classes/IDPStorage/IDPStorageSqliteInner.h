@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "IDPStorageProtocolInner.h"
-#import "../Subs/ALSingleton.h"
-#import "../ALDatabase/ALDatabase.h"
+#import "ALSingleton.h"
+#import "ALDatabase.h"
 @interface IDPStorageSqliteInner : NSObject <IDPStorageProtocolInner>
 
 -(id)initWithNameSpace:(NSString*)nameSpace;

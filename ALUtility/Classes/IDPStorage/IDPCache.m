@@ -12,7 +12,7 @@
 #import "IDPStorage.h"
 #import "IDPStorageMemoryInner.h"
 #import "IDPConfig.h"
-#import "../Categories/NSDictionary+ALExtension.h"
+#import "NSDictionary+ALExtension.h"
 
 //存储现有缓存namespace的key
 #define kIdpAllCacheNameSpace                                   @"idp_all_cache_namespace"

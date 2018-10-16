@@ -35,17 +35,6 @@
 		4B68BD322175EB2C003992C4 /* ALNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCA82175EB2B003992C4 /* ALNavigationController.h */; };
 		4B68BD332175EB2C003992C4 /* ALAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCA92175EB2B003992C4 /* ALAutoScrollLabel.m */; };
 		4B68BD342175EB2C003992C4 /* ALUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCAA2175EB2B003992C4 /* ALUtility.h */; };
-		4B68BD362175EB2C003992C4 /* ALZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCAD2175EB2C003992C4 /* ALZipArchive.h */; };
-		4B68BD372175EB2C003992C4 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCAE2175EB2C003992C4 /* unzip.c */; };
-		4B68BD382175EB2C003992C4 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCAF2175EB2C003992C4 /* zip.c */; };
-		4B68BD392175EB2C003992C4 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCB02175EB2C003992C4 /* ioapi.c */; };
-		4B68BD3A2175EB2C003992C4 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCB12175EB2C003992C4 /* mztools.c */; };
-		4B68BD3B2175EB2C003992C4 /* ALZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCB22175EB2C003992C4 /* ALZipArchive.m */; };
-		4B68BD3C2175EB2C003992C4 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB32175EB2C003992C4 /* crypt.h */; };
-		4B68BD3D2175EB2C003992C4 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB42175EB2C003992C4 /* zip.h */; };
-		4B68BD3E2175EB2C003992C4 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB52175EB2C003992C4 /* unzip.h */; };
-		4B68BD3F2175EB2C003992C4 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB62175EB2C003992C4 /* mztools.h */; };
-		4B68BD402175EB2C003992C4 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB72175EB2C003992C4 /* ioapi.h */; };
 		4B68BD432175EB2C003992C4 /* IDPStorageSqliteInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCBC2175EB2C003992C4 /* IDPStorageSqliteInner.h */; };
 		4B68BD442175EB2C003992C4 /* IDPStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCBD2175EB2C003992C4 /* IDPStorage.m */; };
 		4B68BD452175EB2C003992C4 /* IDPStorageMemoryInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCBE2175EB2C003992C4 /* IDPStorageMemoryInner.h */; };
@@ -193,17 +182,6 @@
 		4B68BCA82175EB2B003992C4 /* ALNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavigationController.h; sourceTree = "<group>"; };
 		4B68BCA92175EB2B003992C4 /* ALAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAutoScrollLabel.m; sourceTree = "<group>"; };
 		4B68BCAA2175EB2B003992C4 /* ALUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUtility.h; sourceTree = "<group>"; };
-		4B68BCAD2175EB2C003992C4 /* ALZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALZipArchive.h; sourceTree = "<group>"; };
-		4B68BCAE2175EB2C003992C4 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		4B68BCAF2175EB2C003992C4 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		4B68BCB02175EB2C003992C4 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		4B68BCB12175EB2C003992C4 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
-		4B68BCB22175EB2C003992C4 /* ALZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALZipArchive.m; sourceTree = "<group>"; };
-		4B68BCB32175EB2C003992C4 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		4B68BCB42175EB2C003992C4 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		4B68BCB52175EB2C003992C4 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		4B68BCB62175EB2C003992C4 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		4B68BCB72175EB2C003992C4 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
 		4B68BCBC2175EB2C003992C4 /* IDPStorageSqliteInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPStorageSqliteInner.h; sourceTree = "<group>"; };
 		4B68BCBD2175EB2C003992C4 /* IDPStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPStorage.m; sourceTree = "<group>"; };
 		4B68BCBE2175EB2C003992C4 /* IDPStorageMemoryInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPStorageMemoryInner.h; sourceTree = "<group>"; };
@@ -381,7 +359,6 @@
 			children = (
 				4B68BD052175EB2C003992C4 /* 3rd */,
 				4B68BD102175EB2C003992C4 /* ALDatabase */,
-				4B68BCAC2175EB2B003992C4 /* ALZipArchive */,
 				4B68BCD52175EB2C003992C4 /* Categories */,
 				4B68BCBB2175EB2C003992C4 /* IDPStorage */,
 				4B68BCCA2175EB2C003992C4 /* Objects */,
@@ -421,24 +398,6 @@
 				4B68BC952175EB2B003992C4 /* ALZoomRotateImageView.m */,
 			);
 			path = Subs;
-			sourceTree = "<group>";
-		};
-		4B68BCAC2175EB2B003992C4 /* ALZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				4B68BCAD2175EB2C003992C4 /* ALZipArchive.h */,
-				4B68BCB22175EB2C003992C4 /* ALZipArchive.m */,
-				4B68BCB32175EB2C003992C4 /* crypt.h */,
-				4B68BCB02175EB2C003992C4 /* ioapi.c */,
-				4B68BCB72175EB2C003992C4 /* ioapi.h */,
-				4B68BCB12175EB2C003992C4 /* mztools.c */,
-				4B68BCB62175EB2C003992C4 /* mztools.h */,
-				4B68BCAE2175EB2C003992C4 /* unzip.c */,
-				4B68BCB52175EB2C003992C4 /* unzip.h */,
-				4B68BCAF2175EB2C003992C4 /* zip.c */,
-				4B68BCB42175EB2C003992C4 /* zip.h */,
-			);
-			path = ALZipArchive;
 			sourceTree = "<group>";
 		};
 		4B68BCBB2175EB2C003992C4 /* IDPStorage */ = {
@@ -697,7 +656,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B68BD402175EB2C003992C4 /* ioapi.h in Headers */,
 				4B68BD602175EB2C003992C4 /* UINavigationController+ALExtension.h in Headers */,
 				4B68BD942175EB2C003992C4 /* ALDatabaseAdditions.h in Headers */,
 				4B68BD432175EB2C003992C4 /* IDPStorageSqliteInner.h in Headers */,
@@ -712,19 +670,16 @@
 				4B68BD902175EB2C003992C4 /* SSPieProgressView.h in Headers */,
 				4B68BD592175EB2C003992C4 /* ALReachability.h in Headers */,
 				4B68BD712175EB2C003992C4 /* UIDevice+Resolutions.h in Headers */,
-				4B68BD3C2175EB2C003992C4 /* crypt.h in Headers */,
 				4B68BD212175EB2C003992C4 /* ALReceiveHitTestSubView.h in Headers */,
 				4B68BD2E2175EB2C003992C4 /* ALTitleLabel.h in Headers */,
 				4B68BD9B2175EB2C003992C4 /* ALDatabasePool.h in Headers */,
 				4B68BD7F2175EB2C003992C4 /* UISegmentedControl+ALExtension.h in Headers */,
 				4B68BD482175EB2C003992C4 /* IDPCache.h in Headers */,
 				4B68BD892175EB2C003992C4 /* SSDrawingUtilities.h in Headers */,
-				4B68BD3D2175EB2C003992C4 /* zip.h in Headers */,
 				5D2FF6EEDD6A0DB21D3321DFA9C5404F /* ALUtility-umbrella.h in Headers */,
 				4B68BD792175EB2C003992C4 /* NSDictionary+ALExtension.h in Headers */,
 				4B68BD7C2175EB2C003992C4 /* UINavigationItemAdditions.h in Headers */,
 				4B68BD562175EB2C003992C4 /* ALCheckNetWork.h in Headers */,
-				4B68BD362175EB2C003992C4 /* ALZipArchive.h in Headers */,
 				4B68BD342175EB2C003992C4 /* ALUtility.h in Headers */,
 				4B68BD672175EB2C003992C4 /* PDProgressHUD+ALExtension.h in Headers */,
 				4B68BD932175EB2C003992C4 /* ALResultSet.h in Headers */,
@@ -732,7 +687,6 @@
 				4B68BD532175EB2C003992C4 /* PDProgressHUD.h in Headers */,
 				4B68BD2C2175EB2C003992C4 /* ALWebVC.h in Headers */,
 				4B68BD752175EB2C003992C4 /* UIBarButtonItem+ALExtension.h in Headers */,
-				4B68BD3E2175EB2C003992C4 /* unzip.h in Headers */,
 				4B68BD5A2175EB2C003992C4 /* ALKeyChain.h in Headers */,
 				4B68BD4A2175EB2C003992C4 /* IDPStorage.h in Headers */,
 				4B68BD7B2175EB2C003992C4 /* UIView+ALExtension.h in Headers */,
@@ -761,7 +715,6 @@
 				4B68BD6A2175EB2C003992C4 /* NSDate+ALExtension.h in Headers */,
 				4B68BD282175EB2C003992C4 /* ALExtension.h in Headers */,
 				4B68BD8D2175EB2C003992C4 /* AGEmojiPageView.h in Headers */,
-				4B68BD3F2175EB2C003992C4 /* mztools.h in Headers */,
 				4B68BD732175EB2C003992C4 /* UIView+SubView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,12 +822,10 @@
 				4B68BD6C2175EB2C003992C4 /* UINavigationItemAdditions.m in Sources */,
 				4B68BD222175EB2C003992C4 /* ALNavigationBar.m in Sources */,
 				4B68BD7A2175EB2C003992C4 /* UINavigationController+ALExtension.m in Sources */,
-				4B68BD3A2175EB2C003992C4 /* mztools.c in Sources */,
 				4B68BD302175EB2C003992C4 /* ALReceiveHitTestSubView.m in Sources */,
 				4B68BD312175EB2C003992C4 /* ALLineView.m in Sources */,
 				4B68BD1C2175EB2C003992C4 /* ALWebVC.m in Sources */,
 				4B68BD242175EB2C003992C4 /* ALUtility.m in Sources */,
-				4B68BD372175EB2C003992C4 /* unzip.c in Sources */,
 				4B68BD882175EB2C003992C4 /* SoundManager.m in Sources */,
 				4B68BD652175EB2C003992C4 /* UIBarButtonItem+ALExtension.m in Sources */,
 				4B68BD782175EB2C003992C4 /* UILabel+ALExtension.m in Sources */,
@@ -886,9 +837,7 @@
 				4B68BD552175EB2C003992C4 /* ALKeyChain.m in Sources */,
 				4B68BD612175EB2C003992C4 /* NSDictionary+ALExtension.m in Sources */,
 				4B68BD2D2175EB2C003992C4 /* ALSingleton.m in Sources */,
-				4B68BD382175EB2C003992C4 /* zip.c in Sources */,
 				4B68BD5E2175EB2C003992C4 /* UIDevice+Resolutions.m in Sources */,
-				4B68BD3B2175EB2C003992C4 /* ALZipArchive.m in Sources */,
 				4B68BD572175EB2C003992C4 /* PDProgressHUD.m in Sources */,
 				4B68BD5F2175EB2C003992C4 /* UIView+ALExtension.m in Sources */,
 				4B68BD912175EB2C003992C4 /* AGCancelTouchScrollView.m in Sources */,
@@ -916,7 +865,6 @@
 				B0EE4B5FD414931C12640FAB3A5876C8 /* ALUtility-dummy.m in Sources */,
 				4B68BD4D2175EB2C003992C4 /* IDPCache.m in Sources */,
 				4B68BD4E2175EB2C003992C4 /* IDPConfig.m in Sources */,
-				4B68BD392175EB2C003992C4 /* ioapi.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

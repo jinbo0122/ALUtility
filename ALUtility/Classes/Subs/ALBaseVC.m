@@ -7,7 +7,7 @@
 //
 
 #import "ALBaseVC.h"
-#import "../Categories/UINavigationController+ALExtension.h"
+#import "UINavigationController+ALExtension.h"
 @implementation ALBaseVC
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

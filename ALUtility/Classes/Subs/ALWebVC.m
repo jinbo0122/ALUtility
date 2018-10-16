@@ -7,8 +7,8 @@
 //
 
 #import "ALWebVC.h"
-#import "../Categories/UIBarButtonItem+ALExtension.h"
-#import "../Categories/UIColor+ALExtension.h"
+#import "UIBarButtonItem+ALExtension.h"
+#import "UIColor+ALExtension.h"
 #import "ALUtility.h"
 #import "ALTitleLabel.h"
 @interface ALWebVC()<UIWebViewDelegate>

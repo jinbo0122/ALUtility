@@ -7,7 +7,7 @@
 //
 
 #import "ALLineView.h"
-#import "../Categories/UIColor+ALExtension.h"
+#import "UIColor+ALExtension.h"
 @implementation ALLineView
 
 + (ALLineView *)lineWithFrame:(CGRect)frame colorHex:(UInt32)colorHex{

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../ALDatabase/ALDatabase.h"
-#import "../ALDatabase/ALResultSet.h"
+#import "ALDatabase.h"
+#import "ALResultSet.h"
 /***********DATABASE CONDITION***********/
 #define DB_CONDITION_EQUAL            @"="
 #define DB_CONDITION_NOT_EQUAL        @"!="

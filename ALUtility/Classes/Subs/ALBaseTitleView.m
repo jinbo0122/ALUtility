@@ -7,8 +7,8 @@
 //
 
 #import "ALBaseTitleView.h"
-#import "../Categories/UIView+ALExtension.h"
-#import "../Categories/UILabel+ALExtension.h"
+#import "UIView+ALExtension.h"
+#import "UILabel+ALExtension.h"
 @interface ALBaseTitleView()
 @property(nonatomic, strong)UILabel *lblTitle;
 @property(nonatomic, strong)UIImageView *iconMore;

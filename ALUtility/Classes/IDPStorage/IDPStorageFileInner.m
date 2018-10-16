@@ -9,8 +9,8 @@
 #import "IDPStorageFileInner.h"
 #import "IDPStorageConst.h"
 #import <Foundation/Foundation.h>
-#import "../Categories/NSString+ALExtension.h"
-#import "../Categories/NSDictionary+ALExtension.h"
+#import "NSString+ALExtension.h"
+#import "NSDictionary+ALExtension.h"
 @interface IDPStorageFileInner ()
 @property (nonatomic,copy) NSString* nameSpace;
 @property (nonatomic,copy,getter = getStoragePath) NSString* storagePath;

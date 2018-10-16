@@ -9,10 +9,10 @@
 #import "IDPStorage.h"
 #import "IDPStorageFileInner.h"
 #import "IDPStorageSqliteInner.h"
-#import "../Categories/NSArray+ALExtension.h"
-#import "../Categories/NSDictionary+ALExtension.h"
-#import "../Categories/NSData+ALExtension.h"
-#import "../Categories/NSString+ALExtension.h"
+#import "NSArray+ALExtension.h"
+#import "NSDictionary+ALExtension.h"
+#import "NSData+ALExtension.h"
+#import "NSString+ALExtension.h"
 
 typedef enum {
     IDPCacheObjectTypeData = 1,

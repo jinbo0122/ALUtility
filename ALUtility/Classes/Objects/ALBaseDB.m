@@ -9,7 +9,7 @@
 #import "ALBaseDB.h"
 #import "../ALDatabase/ALDatabase.h"
 #import "../ALDatabase/ALDatabaseAdditions.h"
-#import "../Categories/NSDictionary+ALExtension.h"
+#import "NSDictionary+ALExtension.h"
 @implementation ALDataBase (ALBaseDB)
 + (NSString *)conditionColumn:(NSString *)column compareType:(NSString *)compareType value:(id)value{
   NSString *valueString = @"";

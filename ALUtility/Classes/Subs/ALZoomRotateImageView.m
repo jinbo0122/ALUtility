@@ -7,7 +7,7 @@
 //
 
 #import "ALZoomRotateImageView.h"
-#import "../Categories/UIView+ALExtension.h"
+#import "UIView+ALExtension.h"
 #define GAP_BORDER_TO_FRAME 20
 #define MINIMUM_RADIUS 25
 

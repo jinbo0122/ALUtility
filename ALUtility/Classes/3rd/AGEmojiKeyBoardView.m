@@ -9,11 +9,11 @@
 #import "AGEmojiKeyBoardView.h"
 #import "AGEmojiPageView.h"
 #import "AGCancelTouchScrollView.h"
-#import "../Categories/NSArray+ALExtension.h"
-#import "../Categories/UIColor+ALExtension.h"
-#import "../Categories/UIImage+ALExtension.h"
-#import "../Categories/UIView+ALExtension.h"
-#import "../Categories/UIDevice-Hardware.h"
+#import "NSArray+ALExtension.h"
+#import "UIColor+ALExtension.h"
+#import "UIImage+ALExtension.h"
+#import "UIView+ALExtension.h"
+#import "UIDevice-Hardware.h"
 static const CGFloat ButtonWidth = 45;
 static const CGFloat ButtonHeight = 40;
 

@@ -6,8 +6,8 @@
 
 #import "PDProgressHUD.h"
 #import <tgmath.h>
-#import "../Subs/ALUtility.h"
-#import "../Categories/NSString+ALExtension.h"
+#import "ALUtility.h"
+#import "NSString+ALExtension.h"
 #if __has_feature(objc_arc)
 #define MB_AUTORELEASE(exp) exp
 #define MB_RELEASE(exp) exp

@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
   s.prefix_header_contents = '#import "ALExtension.h"'
-  s.source_files = 'ALUtility/Classes/**/*.{h,m}'
+  s.source_files = 'ALUtility/Classes/**/*.{h,m,c}'
   
   # s.resource_bundles = {
   #   'ALUtility' => ['ALUtility/Assets/*.png']
