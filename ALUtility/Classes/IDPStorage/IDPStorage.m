@@ -405,7 +405,7 @@ static dispatch_queue_t get_idp_asy_queue()
 
 -(UIImage*)parseImageObject:(NSData *)data
 {
-  return nil;//[UIImage sd_imageWithData:data];
+  return [UIImage imageWithData:data];
 }
 
 -(UIImage*)loadImageForKey:(NSString*)key error:(NSError**)error
