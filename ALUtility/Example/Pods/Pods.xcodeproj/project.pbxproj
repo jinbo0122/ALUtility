@@ -46,8 +46,6 @@
 		4B68BD3E2175EB2C003992C4 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB52175EB2C003992C4 /* unzip.h */; };
 		4B68BD3F2175EB2C003992C4 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB62175EB2C003992C4 /* mztools.h */; };
 		4B68BD402175EB2C003992C4 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCB72175EB2C003992C4 /* ioapi.h */; };
-		4B68BD412175EB2C003992C4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCB92175EB2C003992C4 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4B68BD422175EB2C003992C4 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCBA2175EB2C003992C4 /* JSONKit.h */; };
 		4B68BD432175EB2C003992C4 /* IDPStorageSqliteInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCBC2175EB2C003992C4 /* IDPStorageSqliteInner.h */; };
 		4B68BD442175EB2C003992C4 /* IDPStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BCBD2175EB2C003992C4 /* IDPStorage.m */; };
 		4B68BD452175EB2C003992C4 /* IDPStorageMemoryInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BCBE2175EB2C003992C4 /* IDPStorageMemoryInner.h */; };
@@ -206,8 +204,6 @@
 		4B68BCB52175EB2C003992C4 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
 		4B68BCB62175EB2C003992C4 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
 		4B68BCB72175EB2C003992C4 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		4B68BCB92175EB2C003992C4 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		4B68BCBA2175EB2C003992C4 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4B68BCBC2175EB2C003992C4 /* IDPStorageSqliteInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPStorageSqliteInner.h; sourceTree = "<group>"; };
 		4B68BCBD2175EB2C003992C4 /* IDPStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPStorage.m; sourceTree = "<group>"; };
 		4B68BCBE2175EB2C003992C4 /* IDPStorageMemoryInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPStorageMemoryInner.h; sourceTree = "<group>"; };
@@ -388,7 +384,6 @@
 				4B68BCAC2175EB2B003992C4 /* ALZipArchive */,
 				4B68BCD52175EB2C003992C4 /* Categories */,
 				4B68BCBB2175EB2C003992C4 /* IDPStorage */,
-				4B68BCB82175EB2C003992C4 /* JSONKit */,
 				4B68BCCA2175EB2C003992C4 /* Objects */,
 				4B68BD022175EB2C003992C4 /* SoundManager */,
 				4B68BC902175EB2B003992C4 /* Subs */,
@@ -444,15 +439,6 @@
 				4B68BCB42175EB2C003992C4 /* zip.h */,
 			);
 			path = ALZipArchive;
-			sourceTree = "<group>";
-		};
-		4B68BCB82175EB2C003992C4 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				4B68BCBA2175EB2C003992C4 /* JSONKit.h */,
-				4B68BCB92175EB2C003992C4 /* JSONKit.m */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		4B68BCBB2175EB2C003992C4 /* IDPStorage */ = {
@@ -766,7 +752,6 @@
 				4B68BD622175EB2C003992C4 /* UILabel+ALExtension.h in Headers */,
 				4B68BD1B2175EB2C003992C4 /* ALSingleton.h in Headers */,
 				4B68BD662175EB2C003992C4 /* UIImage+ALExtension.h in Headers */,
-				4B68BD422175EB2C003992C4 /* JSONKit.h in Headers */,
 				4B68BD742175EB2C003992C4 /* NSNumber+ALExtension.h in Headers */,
 				4B68BD8C2175EB2C003992C4 /* AGCancelTouchScrollView.h in Headers */,
 				4B68BD6B2175EB2C003992C4 /* UIColor+ALExtension.h in Headers */,
@@ -918,7 +903,6 @@
 				4B68BD972175EB2C003992C4 /* ALDatabaseQueue.m in Sources */,
 				4B68BD632175EB2C003992C4 /* UIDevice-Hardware.m in Sources */,
 				4B68BD6D2175EB2C003992C4 /* UITableView+NoDataNotice.m in Sources */,
-				4B68BD412175EB2C003992C4 /* JSONKit.m in Sources */,
 				4B68BD4B2175EB2C003992C4 /* IDPStorageSqliteInner.m in Sources */,
 				4B68BD492175EB2C003992C4 /* IDPStorageFileInner.m in Sources */,
 				4B68BD922175EB2C003992C4 /* AGEmojiPageView.m in Sources */,
