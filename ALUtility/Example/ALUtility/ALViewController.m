@@ -7,7 +7,6 @@
 //
 
 #import "ALViewController.h"
-
 @interface ALViewController ()
 
 @end

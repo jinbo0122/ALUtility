@@ -7,10 +7,10 @@
 //
 
 #import "ALBaseVC.h"
-
+#import <WebKit/WebKit.h>
 @interface ALWebVC : ALBaseVC
 @property (nonatomic, strong)NSString   *url;
 @property (nonatomic, strong)NSString   *titleTxt;
-@property (nonatomic, strong)UIWebView  *webView;
+@property (nonatomic, strong)WKWebView  *webView;
 @property (nonatomic, assign)BOOL isModal;
 @end

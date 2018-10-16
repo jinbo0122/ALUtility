@@ -11,22 +11,28 @@
 #import "UIColor+ALExtension.h"
 #import "ALUtility.h"
 #import "ALTitleLabel.h"
-@interface ALWebVC()<UIWebViewDelegate>
+@interface ALWebVC()<WKNavigationDelegate,WKUIDelegate>
 @end
 
 @implementation ALWebVC
 - (void)viewDidLoad{
   [super viewDidLoad];
   
-  _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+  NSString *jScript = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);";
+  
+  WKUserScript *wkUScript = [[WKUserScript alloc] initWithSource:jScript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+  WKUserContentController *wkUController = [[WKUserContentController alloc] init];
+  [wkUController addUserScript:wkUScript];
+  
+  WKWebViewConfiguration *wkWebConfig = [[WKWebViewConfiguration alloc] init];
+  wkWebConfig.userContentController = wkUController;
+  wkWebConfig.allowsInlineMediaPlayback = YES;
+  _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:wkWebConfig];
   _webView.backgroundColor = [UIColor whiteColor];
   [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
-  
   [self.view addSubview:_webView];
-  _webView.delegate = self;
-  _webView.scalesPageToFit = YES;
-  _webView.allowsInlineMediaPlayback = YES;
-  
+  _webView.navigationDelegate = self;
+  _webView.UIDelegate = self;
   if (_isModal) {
     UIBarButtonItem *leftBtn = [UIBarButtonItem loadBarButtonItemWithImage:ALBackBarButtonArrowResource
                                                                       rect:ALBackBarButtonArrowRect
@@ -38,17 +44,18 @@
   }
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-  NSString *title=[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
   __weak typeof(self)wSelf = self;
-  if ([[wSelf.navigationController.viewControllers lastObject] isEqual:wSelf]) {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-      if ([[wSelf.navigationController.viewControllers lastObject] isEqual:wSelf]) {
-        wSelf.navigationItem.titleView = [[ALTitleLabel alloc] initWithTitle:title
-                                                                       color:[UIColor colorWithRGBHex:0x262626]];
-      }
-    });
-  }
+  [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable title, NSError * _Nullable error) {
+    if ([[wSelf.navigationController.viewControllers lastObject] isEqual:wSelf]) {
+      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if ([[wSelf.navigationController.viewControllers lastObject] isEqual:wSelf]) {
+          wSelf.navigationItem.titleView = [[ALTitleLabel alloc] initWithTitle:title
+                                                                         color:[UIColor colorWithRGBHex:0x262626]];
+        }
+      });
+    }
+  }];
   
   if ([webView canGoBack]) {
     UIBarButtonItem *leftBtn = [UIBarButtonItem loadBarButtonItemWithImage:ALBackBarButtonArrowResource
