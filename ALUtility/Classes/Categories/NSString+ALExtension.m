@@ -12,6 +12,19 @@
 #import "NSArray+ALExtension.h"
 #import <AVFoundation/AVFoundation.h>
 @implementation NSString (ALExtension)
+#pragma mark - Time
+- (NSString *)timeString{
+  return [self stringByReplacingOccurrencesOfString:@"T" withString:@" "];
+}
+
++ (NSString*)timeString:(NSTimeInterval)time{
+  [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehaviorDefault];
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+  [dateFormatter setTimeStyle:NSDateFormatterFullStyle];
+  return [NSString stringWithFormat:@"?%@",[dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:time]]];
+}
+
 + (NSString*)timeString:(NSString *)unixTime format:(MHPrettyDateFormat)format{
   return [NSString time:[unixTime doubleValue] format:format];
 }
@@ -36,13 +49,35 @@
   return timeString;
 }
 
-+ (NSString*)timeString:(NSTimeInterval)time{
-  [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehaviorDefault];
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  [dateFormatter setDateStyle:NSDateFormatterFullStyle];
-  [dateFormatter setTimeStyle:NSDateFormatterFullStyle];
-  return [NSString stringWithFormat:@"?%@",[dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:time]]];
++ (NSString *)timeStringFromSec:(int)sec{
+  int h = sec/3600;
+  int m = (sec-h*3600)/60;
+  int s = sec%30;
+  NSString *time = h==0?@"":[NSString stringWithFormat:@"%d小时",h];
+  time = m==0?[time stringByAppendingString:@""]:[time stringByAppendingString:[NSString stringWithFormat:@"%d分",m]];
+  time = s==0?[time stringByAppendingString:@""]:[time stringByAppendingString:[NSString stringWithFormat:@"%d秒",s]];
+  return time;
 }
+
++ (NSString *)timeCountStringByTime:(NSTimeInterval)time{
+  int h = time/3600;
+  int m = (time-h*3600)/60;
+  int s = time-h*3600-m*60;
+  
+  NSString *hStr = h<10?[NSString stringWithFormat:@"0%d",h]:[NSString stringWithFormat:@"%d",h];
+  NSString *mStr = m<10?[NSString stringWithFormat:@"0%d",m]:[NSString stringWithFormat:@"%d",m];
+  NSString *sStr = s<10?[NSString stringWithFormat:@"0%d",s]:[NSString stringWithFormat:@"%d",s];
+  
+  NSString *callingTime = @"";
+  if (h>0) {
+    callingTime = [NSString stringWithFormat:@"%@:%@:%@",hStr,mStr,sStr];
+  }
+  else{
+    callingTime = [NSString stringWithFormat:@"%@:%@",mStr,sStr];
+  }
+  return callingTime;
+}
+
 
 + (NSString *)calendarWithWeekday:(NSTimeInterval)unixTime{
   NSDate *date = [NSDate dateWithTimeIntervalSince1970:unixTime];
@@ -104,24 +139,7 @@
   return timeStr;
 }
 
-+ (NSString *)timeStringFromSec:(int)sec{
-  int h = sec/3600;
-  int m = (sec-h*3600)/60;
-  int s = sec%30;
-  NSString *time = h==0?@"":[NSString stringWithFormat:@"%d小时",h];
-  time = m==0?[time stringByAppendingString:@""]:[time stringByAppendingString:[NSString stringWithFormat:@"%d分",m]];
-  time = s==0?[time stringByAppendingString:@""]:[time stringByAppendingString:[NSString stringWithFormat:@"%d秒",s]];
-  return time;
-}
-
-- (NSString *)trimWhitespace
-{
-  NSMutableString *str = [self mutableCopy];
-  CFStringTrimWhitespace((CFMutableStringRef)str);
-  return str;
-}
-
-#pragma mark String MD5 Encoding & Decoding
+#pragma mark - MD5
 + (NSString *)stringByMD5Encoding:(NSString*)inputString{
   const char *cStr = [inputString UTF8String];
   unsigned char result[16];
@@ -134,69 +152,94 @@
           result[12], result[13], result[14], result[15]
           ];
 }
-#pragma mark URL String Encoding & Decoding
-- (NSNumber *)numberValue{
-  NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-  [f setNumberStyle:NSNumberFormatterDecimalStyle];
-  return [f numberFromString:self];
-}
 
-- (NSData *)UTF8Data
+- (NSString *)MD5
 {
-  return [self dataUsingEncoding:NSUTF8StringEncoding];
+  const char *cStr = [self UTF8String];
+  unsigned char result[CC_MD5_DIGEST_LENGTH];
+  CC_MD5( cStr, (int)strlen(cStr), result ); // This is the md5 call
+  return [NSString stringWithFormat:
+          @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
+          result[0], result[1], result[2], result[3],
+          result[4], result[5], result[6], result[7],
+          result[8], result[9], result[10], result[11],
+          result[12], result[13], result[14], result[15]
+          ];
 }
 
-- (NSArray *)getAtNames{
-  NSMutableArray *substrings = [NSMutableArray new];
-  NSScanner *scanner = [NSScanner scannerWithString:self];
-  [scanner scanUpToString:@"@" intoString:nil]; // Scan all characters before #
-  while(![scanner isAtEnd]) {
-    NSString *substring = nil;
-    [scanner scanString:@"@" intoString:nil]; // Scan the # character
-    if([scanner scanUpToString:@" " intoString:&substring]) {
-      // If the space immediately followed the #, this will be skipped
-      [substrings addObject:substring];
-    }
-    [scanner scanUpToString:@"@" intoString:nil]; // Scan all characters before next #
-  }
-  // do something with substrings
-  return substrings;
-}
+#pragma mark Base64 Related
 
-- (NSString *)convertSingleQuote{
-  if ([self rangeOfString:@"'"].location != NSNotFound) {
-    NSMutableString *str = [@"" mutableCopy];
-    for (NSInteger i=0;i<self.length; i++) {
-      NSString *subStr = [self substringWithRange:NSMakeRange(i, 1)];
-      if ([subStr isEqualToString:@"'"]) {
-        [str appendString:@"''"];
-      }
-      else{
-        [str appendString:subStr];
-      }
-    }
-    return [str copy];
-  }
-  else{
-    return self;
-  }
-}
-#pragma mark Cache Path Direction
-+ (NSString *)pathByCacheDirection:(NSString*)customCacheDirectionName{
-  NSArray *cacheDirectoryArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-  NSString *pathString = [cacheDirectoryArray objectAtIndex:0];
-  NSString *customCacheDirection = [pathString stringByAppendingPathComponent:customCacheDirectionName];
-  if (![[NSFileManager defaultManager] fileExistsAtPath:customCacheDirection])
++ (NSString *)stringWithBase64EncodedString:(NSString *)string
+{
+  NSData *data = [NSData dataWithBase64EncodedString:string];
+  if (data)
   {
-    [[NSFileManager defaultManager] createDirectoryAtPath:customCacheDirection
-                              withIntermediateDirectories:NO
-                                               attributes:nil
-                                                    error:nil];
+    return [[self alloc] initWithData:data encoding:NSUTF8StringEncoding];
   }
-  
-  return customCacheDirection;
+  return nil;
 }
 
+- (NSString *)base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth
+{
+  NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+  return [data base64EncodedStringWithWrapWidth:wrapWidth];
+}
+
+- (NSString *)base64EncodedString
+{
+  NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+  return [data base64EncodedString];
+}
+
+- (NSString *)base64DecodedString
+{
+  return [NSString stringWithBase64EncodedString:self];
+}
+
+- (NSData *)base64DecodedData
+{
+  return [NSData dataWithBase64EncodedString:self];
+}
+
+#pragma mark - Attributed String
+- (NSMutableAttributedString *)attributedStringWithFont:(UIFont *)font textColor:(UIColor *)textColor{
+  NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] initWithString:self
+                                                                          attributes:@{NSFontAttributeName:font,
+                                                                                       NSForegroundColorAttributeName:textColor
+                                                                                       }];
+  return mut;
+}
+
+- (CGSize)sizeWithAttributes:(NSDictionary *)attrs constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode{
+  NSMutableDictionary *attrNew = [attrs mutableCopy];
+  NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+  paragraph.lineBreakMode = mode;
+  [attrNew setObject:paragraph forKey:NSParagraphStyleAttributeName];
+  
+  CGSize resultSize = CGSizeZero;
+  @try {
+    resultSize = [self boundingRectWithSize:size
+                                    options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
+                                 attributes:attrNew context:nil].size;
+  } @catch (NSException *exception) {
+  } @finally {
+    return resultSize;
+  }
+}
+
+- (CGSize)sizeWithAttributes:(NSDictionary *)attrs constrainedToSize:(CGSize)size{
+  CGSize resultSize = CGSizeZero;
+  @try {
+    resultSize = [self boundingRectWithSize:size
+                                    options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
+                                 attributes:attrs context:nil].size;
+  } @catch (NSException *exception) {
+  } @finally {
+    return resultSize;
+  }
+}
+
+#pragma mark - Detect
 + (BOOL)stringContainsEmoji:(NSString *)string {
   __block BOOL returnValue = NO;
   [string enumerateSubstringsInRange:NSMakeRange(0, [string length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:
@@ -237,198 +280,9 @@
   return returnValue;
 }
 
-+ (NSString *)timeCountStringByTime:(NSTimeInterval)time{
-  int h = time/3600;
-  int m = (time-h*3600)/60;
-  int s = time-h*3600-m*60;
-  
-  NSString *hStr = h<10?[NSString stringWithFormat:@"0%d",h]:[NSString stringWithFormat:@"%d",h];
-  NSString *mStr = m<10?[NSString stringWithFormat:@"0%d",m]:[NSString stringWithFormat:@"%d",m];
-  NSString *sStr = s<10?[NSString stringWithFormat:@"0%d",s]:[NSString stringWithFormat:@"%d",s];
-  
-  NSString *callingTime = @"";
-  if (h>0) {
-    callingTime = [NSString stringWithFormat:@"%@:%@:%@",hStr,mStr,sStr];
-  }
-  else{
-    callingTime = [NSString stringWithFormat:@"%@:%@",mStr,sStr];
-  }
-  return callingTime;
-}
-
-#pragma mark Traditional Chinese Character
 - (BOOL)containsTraditionalChinese{
-  //  for (NSInteger i=0;i<[self length];i++) {
-  //
-  //  }
-  
   return NO;
 }
-
-#pragma mark MD5 Related
-- (NSString *)MD5
-{
-  const char *cStr = [self UTF8String];
-  unsigned char result[CC_MD5_DIGEST_LENGTH];
-  CC_MD5( cStr, (int)strlen(cStr), result ); // This is the md5 call
-  return [NSString stringWithFormat:
-          @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
-          result[0], result[1], result[2], result[3],
-          result[4], result[5], result[6], result[7],
-          result[8], result[9], result[10], result[11],
-          result[12], result[13], result[14], result[15]
-          ];
-}
-
-
-#pragma mark Base64 Related
-
-+ (NSString *)stringWithBase64EncodedString:(NSString *)string
-{
-  NSData *data = [NSData dataWithBase64EncodedString:string];
-  if (data)
-  {
-    return [[self alloc] initWithData:data encoding:NSUTF8StringEncoding];
-  }
-  return nil;
-}
-
-- (NSString *)base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth
-{
-  NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-  return [data base64EncodedStringWithWrapWidth:wrapWidth];
-}
-
-- (NSString *)base64EncodedString
-{
-  NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-  return [data base64EncodedString];
-}
-
-- (NSString *)base64DecodedString
-{
-  return [NSString stringWithBase64EncodedString:self];
-}
-
-- (NSData *)base64DecodedData
-{
-  return [NSData dataWithBase64EncodedString:self];
-}
-
-- (NSData *)getThumnailWithURL:(int)width height:(int)height{
-  NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
-  NSURL *url=[[NSURL alloc]initWithString:self];
-  AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:opts];
-  AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
-  generator.appliesPreferredTrackTransform = YES;
-  generator.maximumSize = CGSizeMake(width, height);
-  NSError *error = nil;
-  CGImageRef img = [generator copyCGImageAtTime:CMTimeMake(25, 25) actualTime:NULL error:&error]; // 截图第一秒视频帧
-  UIImage *image = [UIImage imageWithCGImage: img];
-  return UIImageJPEGRepresentation(image,1.0);;
-}
-
-- (UIImage *)getThumnailImageWithURL:(int)width height:(int)height{
-  NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
-  NSURL *url=[[NSURL alloc]initWithString:self];
-  AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:opts];
-  AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
-  generator.appliesPreferredTrackTransform = YES;
-  generator.maximumSize = CGSizeMake(width, height);
-  NSError *error = nil;
-  CGImageRef img = [generator copyCGImageAtTime:CMTimeMake(25, 25) actualTime:NULL error:&error]; // 截图第一秒视频帧
-  UIImage *image = [UIImage imageWithCGImage: img];
-  return image;
-}
-
-+ (NSString *)getFaceImageLocalPathByStoreData:(NSData *)imageData{
-  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-  NSString *imageLocalPath = [paths safeObjectAtIndex:0];
-  imageLocalPath = [imageLocalPath stringByAppendingPathComponent:[[NSString stringByMD5Encoding:[NSString stringWithFormat:@"%@%@",@"FaceCamera",[NSString timeString:[NSDate currentTime]]]] stringByAppendingString:@".jpg"]];
-  
-  BOOL succeed = [imageData writeToFile:imageLocalPath atomically:YES];
-  
-  if (!succeed) {
-    NSLog(@"write local image failed");
-  }
-  else{
-    NSLog(@"%@",imageLocalPath);
-  }
-  return imageLocalPath;
-}
-
-+ (NSString *)lineStringByLength:(CGFloat)length font:(CGFloat)fontSize{
-  NSString *line = @"_";
-  CGSize size = [line sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}];
-  NSInteger count = length/size.width;
-  while (count>0) {
-    line= [line stringByAppendingString:@"_"];
-    count--;
-  }
-  return line;
-}
-#pragma mark 字数判断
-+ (int)convertToInt:(NSString*)strtemp {
-  int strlength = 0;
-  char* p = (char*)[strtemp cStringUsingEncoding:NSUnicodeStringEncoding];
-  for (int i=0 ; i<[strtemp lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
-    if (*p) {
-      p++;
-      strlength++;
-    }
-    else {
-      p++;
-    }
-  }
-  return (strlength+1)/2;
-}
-+ (NSString *)stringWithLimitedChineseCharacter:(NSInteger)length string:(NSString*)strtemp{
-  int strlength = 0;
-  char* p = (char*)[strtemp cStringUsingEncoding:NSUnicodeStringEncoding];
-  for (int i=0 ; i<[strtemp lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
-    if (*p) {
-      p++;
-      strlength++;
-      if (((strlength+1)/2)>=length) {
-        return [strtemp substringToIndex:i];
-      }
-    }
-    else {
-      p++;
-    }
-  }
-  return strtemp;
-}
-
-- (CGSize)sizeWithAttributes:(NSDictionary *)attrs constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode{
-  NSMutableDictionary *attrNew = [attrs mutableCopy];
-  NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
-  paragraph.lineBreakMode = mode;
-  [attrNew setObject:paragraph forKey:NSParagraphStyleAttributeName];
-  
-  CGSize resultSize = CGSizeZero;
-  @try {
-    resultSize = [self boundingRectWithSize:size
-                                    options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
-                                 attributes:attrNew context:nil].size;
-  } @catch (NSException *exception) {
-  } @finally {
-    return resultSize;
-  }
-}
-
-- (CGSize)sizeWithAttributes:(NSDictionary *)attrs constrainedToSize:(CGSize)size{
-  CGSize resultSize = CGSizeZero;
-  @try {
-    resultSize = [self boundingRectWithSize:size
-                                    options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
-                                 attributes:attrs context:nil].size;
-  } @catch (NSException *exception) {
-  } @finally {
-    return resultSize;
-  }
-}
-
 
 - (BOOL)isValidPassword{
   NSCharacterSet *validChars = [NSCharacterSet alphanumericCharacterSet];
@@ -547,6 +401,166 @@
   }
 }
 
++ (int)convertToInt:(NSString*)strtemp {
+  int strlength = 0;
+  char* p = (char*)[strtemp cStringUsingEncoding:NSUnicodeStringEncoding];
+  for (int i=0 ; i<[strtemp lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
+    if (*p) {
+      p++;
+      strlength++;
+    }
+    else {
+      p++;
+    }
+  }
+  return (strlength+1)/2;
+}
+
+#pragma mark - Custom
+- (NSString *)trimWhitespace
+{
+  NSMutableString *str = [self mutableCopy];
+  CFStringTrimWhitespace((CFMutableStringRef)str);
+  return str;
+}
+
+- (NSNumber *)numberValue{
+  NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+  [f setNumberStyle:NSNumberFormatterDecimalStyle];
+  return [f numberFromString:self];
+}
+
+- (NSData *)UTF8Data
+{
+  return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSArray *)getAtNames{
+  NSMutableArray *substrings = [NSMutableArray new];
+  NSScanner *scanner = [NSScanner scannerWithString:self];
+  [scanner scanUpToString:@"@" intoString:nil]; // Scan all characters before #
+  while(![scanner isAtEnd]) {
+    NSString *substring = nil;
+    [scanner scanString:@"@" intoString:nil]; // Scan the # character
+    if([scanner scanUpToString:@" " intoString:&substring]) {
+      // If the space immediately followed the #, this will be skipped
+      [substrings addObject:substring];
+    }
+    [scanner scanUpToString:@"@" intoString:nil]; // Scan all characters before next #
+  }
+  // do something with substrings
+  return substrings;
+}
+
+- (NSString *)convertSingleQuote{
+  if ([self rangeOfString:@"'"].location != NSNotFound) {
+    NSMutableString *str = [@"" mutableCopy];
+    for (NSInteger i=0;i<self.length; i++) {
+      NSString *subStr = [self substringWithRange:NSMakeRange(i, 1)];
+      if ([subStr isEqualToString:@"'"]) {
+        [str appendString:@"''"];
+      }
+      else{
+        [str appendString:subStr];
+      }
+    }
+    return [str copy];
+  }
+  else{
+    return self;
+  }
+}
+
++ (NSString *)lineStringByLength:(CGFloat)length font:(CGFloat)fontSize{
+  NSString *line = @"_";
+  CGSize size = [line sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}];
+  NSInteger count = length/size.width;
+  while (count>0) {
+    line= [line stringByAppendingString:@"_"];
+    count--;
+  }
+  return line;
+}
+
++ (NSString *)stringWithLimitedChineseCharacter:(NSInteger)length string:(NSString*)strtemp{
+  int strlength = 0;
+  char* p = (char*)[strtemp cStringUsingEncoding:NSUnicodeStringEncoding];
+  for (int i=0 ; i<[strtemp lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
+    if (*p) {
+      p++;
+      strlength++;
+      if (((strlength+1)/2)>=length) {
+        return [strtemp substringToIndex:i];
+      }
+    }
+    else {
+      p++;
+    }
+  }
+  return strtemp;
+}
+
+
+#pragma mark - WTF
++ (NSString *)pathByCacheDirection:(NSString*)customCacheDirectionName{
+  NSArray *cacheDirectoryArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+  NSString *pathString = [cacheDirectoryArray objectAtIndex:0];
+  NSString *customCacheDirection = [pathString stringByAppendingPathComponent:customCacheDirectionName];
+  if (![[NSFileManager defaultManager] fileExistsAtPath:customCacheDirection])
+  {
+    [[NSFileManager defaultManager] createDirectoryAtPath:customCacheDirection
+                              withIntermediateDirectories:NO
+                                               attributes:nil
+                                                    error:nil];
+  }
+  
+  return customCacheDirection;
+}
+
+- (NSData *)getThumnailWithURL:(int)width height:(int)height{
+  NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+  NSURL *url=[[NSURL alloc]initWithString:self];
+  AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:opts];
+  AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
+  generator.appliesPreferredTrackTransform = YES;
+  generator.maximumSize = CGSizeMake(width, height);
+  NSError *error = nil;
+  CGImageRef img = [generator copyCGImageAtTime:CMTimeMake(25, 25) actualTime:NULL error:&error]; // 截图第一秒视频帧
+  UIImage *image = [UIImage imageWithCGImage: img];
+  return UIImageJPEGRepresentation(image,1.0);;
+}
+
+- (UIImage *)getThumnailImageWithURL:(int)width height:(int)height{
+  NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+  NSURL *url=[[NSURL alloc]initWithString:self];
+  AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:opts];
+  AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:urlAsset];
+  generator.appliesPreferredTrackTransform = YES;
+  generator.maximumSize = CGSizeMake(width, height);
+  NSError *error = nil;
+  CGImageRef img = [generator copyCGImageAtTime:CMTimeMake(25, 25) actualTime:NULL error:&error]; // 截图第一秒视频帧
+  UIImage *image = [UIImage imageWithCGImage: img];
+  return image;
+}
+
++ (NSString *)getFaceImageLocalPathByStoreData:(NSData *)imageData{
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+  NSString *imageLocalPath = [paths safeObjectAtIndex:0];
+  imageLocalPath = [imageLocalPath stringByAppendingPathComponent:[[NSString stringByMD5Encoding:[NSString stringWithFormat:@"%@%@",@"FaceCamera",[NSString timeString:[NSDate currentTime]]]] stringByAppendingString:@".jpg"]];
+  
+  BOOL succeed = [imageData writeToFile:imageLocalPath atomically:YES];
+  
+  if (!succeed) {
+    NSLog(@"write local image failed");
+  }
+  else{
+    NSLog(@"%@",imageLocalPath);
+  }
+  return imageLocalPath;
+}
+
+
+#pragma mark - URL
 - (NSURL *)urlWithSuffix:(NSString *)suffix{
   return [NSURL URLWithString:[self stringByAppendingString:suffix]];
 }
@@ -559,7 +573,5 @@
   return [self stringByRemovingPercentEncoding];
 }
 
-- (NSString *)timeString{
-  return [self stringByReplacingOccurrencesOfString:@"T" withString:@" "];
-}
+
 @end
