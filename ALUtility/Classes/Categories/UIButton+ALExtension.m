@@ -13,9 +13,19 @@
 #import "UILabel+ALExtension.h"
 static char UIButtonALExtensionTagString;
 static char UIButtonALExtensionCustomImageView;
+static char UIButtonALExtensionCustomWebView;
 static char UIButtonALExtensionCustomTitleLabel;
+static char UIButtonALExtensionCustomTitleLabel2;
 @implementation UIButton (ALExtension)
-@dynamic tagString,lblCustom;
+@dynamic tagString,lblCustom,lblCustom2, webView;
+
+- (void)setWebView:(UIWebView *)webView{
+  objc_setAssociatedObject(self, &UIButtonALExtensionCustomWebView, webView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIWebView *)webView{
+  return objc_getAssociatedObject(self, &UIButtonALExtensionCustomWebView);
+}
 
 -(void)setTagString:(NSString *)tagString
 {
@@ -39,6 +49,18 @@ static char UIButtonALExtensionCustomTitleLabel;
 
 - (void)setLblCustom:(UILabel *)lblCustom{
   objc_setAssociatedObject(self, &UIButtonALExtensionCustomTitleLabel, lblCustom, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void)setLblCustom2:(UILabel *)lblCustom2{
+  objc_setAssociatedObject(self, &UIButtonALExtensionCustomTitleLabel2, lblCustom2, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UILabel *)lblCustom{
+  return objc_getAssociatedObject(self, &UIButtonALExtensionCustomTitleLabel);
+}
+
+- (UILabel *)lblCustom2{
+  return objc_getAssociatedObject(self, &UIButtonALExtensionCustomTitleLabel2);
 }
 
 @dynamic hitTestEdgeInsets;
@@ -70,13 +92,12 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
   return CGRectContainsPoint(hitFrame, point);
 }
 
-- (UILabel *)lblCustom{
-  return objc_getAssociatedObject(self, &UIButtonALExtensionCustomTitleLabel);
-}
-
 - (void)arrangeCustomSubviewToCenterWithGap:(CGFloat)gap{
   [self.customImageView sizeToFit];
   [self.lblCustom sizeToFit];
+  if (self.width == 0) {
+    self.width = self.customImageView.width + gap + self.lblCustom.width;
+  }
   self.customImageView.left = (self.width-self.customImageView.width-gap-self.lblCustom.width)/2.0;
   self.customImageView.top = (self.height-self.customImageView.height)/2.0;
   self.lblCustom.left = self.customImageView.right+gap;
@@ -94,6 +115,8 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
 }
 
 - (void)setImage:(UIImage *)image text:(NSString *)text textColorHex:(UInt32)textColorHex fontSize:(NSInteger)fontSize gap:(CGFloat)gap{
+  [self.customImageView removeFromSuperview];
+  [self.lblCustom removeFromSuperview];
   self.customImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
   self.customImageView.image = image;
   [self addSubview:self.customImageView];
@@ -114,7 +137,7 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
   self.customImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
   self.customImageView.image = image;
   [self addSubview:self.customImageView];
-  
+  [self.customImageView sizeToFit];
   self.lblCustom = [UILabel initWithFrame:CGRectZero
                                   bgColor:[UIColor clearColor]
                                 textColor:[UIColor colorWithRGBHex:textColorHex]
@@ -122,5 +145,6 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
                             textAlignment:NSTextAlignmentLeft
                                      font:[UIFont systemFontOfSize:fontSize]];
   [self addSubview:self.lblCustom];
+  [self.lblCustom sizeToFit];
 }
 @end

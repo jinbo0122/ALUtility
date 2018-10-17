@@ -71,6 +71,10 @@
 		4A416878FFE5E5EFD2C62025B080354A /* NSDate+ALExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE5FC602DF7E068BF5A8C2F3A9BC780 /* NSDate+ALExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BCB9D72217739DD0081560D /* MHPrettyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB9D70217739DC0081560D /* MHPrettyDate.m */; };
 		4BCB9D73217739DD0081560D /* MHPrettyDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB9D71217739DD0081560D /* MHPrettyDate.h */; };
+		4BCB9D7621773FE60081560D /* NSMutableAttributedString+ALExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB9D7421773FE60081560D /* NSMutableAttributedString+ALExtension.h */; };
+		4BCB9D7721773FE60081560D /* NSMutableAttributedString+ALExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB9D7521773FE60081560D /* NSMutableAttributedString+ALExtension.m */; };
+		4BCB9D7A217740150081560D /* NSAttributedString+ALExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB9D78217740150081560D /* NSAttributedString+ALExtension.h */; };
+		4BCB9D7B217740150081560D /* NSAttributedString+ALExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB9D79217740150081560D /* NSAttributedString+ALExtension.m */; };
 		4C31DE75B7F4B4D110549C09D857FD1C /* ALDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B90876C7CBE83FD04F1CFC94C774BC4 /* ALDatabaseAdditions.m */; };
 		4C3B5C52A5F52240C7081A073EFC59FC /* AGEmojiKeyBoardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1B41D6E15FBCBCD2C453759ACFB64B /* AGEmojiKeyBoardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C472F7109C8B5E871F705EBA3025869 /* UIButton+ALExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 76FE919ADDE94013F307EF86482914BE /* UIButton+ALExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -315,6 +319,10 @@
 		4B0C26A6382DCAFD5F6594B491255DF1 /* ALZoomRotateImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALZoomRotateImageView.m; sourceTree = "<group>"; };
 		4BCB9D70217739DC0081560D /* MHPrettyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHPrettyDate.m; sourceTree = "<group>"; };
 		4BCB9D71217739DD0081560D /* MHPrettyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHPrettyDate.h; sourceTree = "<group>"; };
+		4BCB9D7421773FE60081560D /* NSMutableAttributedString+ALExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+ALExtension.h"; sourceTree = "<group>"; };
+		4BCB9D7521773FE60081560D /* NSMutableAttributedString+ALExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+ALExtension.m"; sourceTree = "<group>"; };
+		4BCB9D78217740150081560D /* NSAttributedString+ALExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+ALExtension.h"; sourceTree = "<group>"; };
+		4BCB9D79217740150081560D /* NSAttributedString+ALExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ALExtension.m"; sourceTree = "<group>"; };
 		4C65D66620010E970CD549470C3D2415 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4E3981827086D0DF197A2E3637B1A555 /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Resolutions.h"; sourceTree = "<group>"; };
 		4E64590A4BAA94316A9EEF048136348A /* AGEmojiKeyBoardView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGEmojiKeyBoardView.m; sourceTree = "<group>"; };
@@ -645,12 +653,16 @@
 			children = (
 				E995EDE8CED56394C1A36B5CD7F5A7D7 /* NSArray+ALExtension.h */,
 				E6D6A545FB77B8B8636A9883DF551258 /* NSArray+ALExtension.m */,
+				4BCB9D78217740150081560D /* NSAttributedString+ALExtension.h */,
+				4BCB9D79217740150081560D /* NSAttributedString+ALExtension.m */,
 				A2F5F6FE57860EEDF8B0435073B206CF /* NSData+ALExtension.h */,
 				3470451909F5485F3515BC15DB206019 /* NSData+ALExtension.m */,
 				DDE5FC602DF7E068BF5A8C2F3A9BC780 /* NSDate+ALExtension.h */,
 				7C74979E71381091783A94E1497E26F1 /* NSDate+ALExtension.m */,
 				75C0A944EEDFB186228A01D3C9BBC71D /* NSDictionary+ALExtension.h */,
 				942409CD24271DF06F2D6E8A85F4132B /* NSDictionary+ALExtension.m */,
+				4BCB9D7421773FE60081560D /* NSMutableAttributedString+ALExtension.h */,
+				4BCB9D7521773FE60081560D /* NSMutableAttributedString+ALExtension.m */,
 				BFCB2FA80BF73867574B7239C7F3582C /* NSNumber+ALExtension.h */,
 				A50544E2B45118C5BACA8CD78F8EF87E /* NSNumber+ALExtension.m */,
 				A803678FFED0160DC1A75A333FE59651 /* NSString+ALExtension.h */,
@@ -667,10 +679,10 @@
 				4A146A18417A653191B9439074259006 /* UIButton+ALExtension.m */,
 				1CCF70FFFBB292779A8F419B03193C68 /* UIColor+ALExtension.h */,
 				5FCD01D536B62E2F4835F6885A70B6EE /* UIColor+ALExtension.m */,
-				4E3981827086D0DF197A2E3637B1A555 /* UIDevice+Resolutions.h */,
-				0C1D6E8BADC153C252FA15E8ABA121B1 /* UIDevice+Resolutions.m */,
 				FDB65A7295CEB8BEBDBC891808DB85AD /* UIDevice-Hardware.h */,
 				0042715E7AFBC1190C842175845659E1 /* UIDevice-Hardware.m */,
+				4E3981827086D0DF197A2E3637B1A555 /* UIDevice+Resolutions.h */,
+				0C1D6E8BADC153C252FA15E8ABA121B1 /* UIDevice+Resolutions.m */,
 				4A7D756797A3A3760020640ADF646A63 /* UIImage+ALExtension.h */,
 				3E2667E60ED94D1C22DB44432C448E16 /* UIImage+ALExtension.m */,
 				239964FA22BFE17CEC997A652BE99111 /* UILabel+ALExtension.h */,
@@ -1022,6 +1034,7 @@
 				D8FF819EBE83A1A0FEBA44D627A8B090 /* IDPCache.h in Headers */,
 				D8212D441903FB9E5BFCE8794596C64A /* IDPConfig.h in Headers */,
 				67138460FD40599FC5CAC133DEA75382 /* IDPStorage.h in Headers */,
+				4BCB9D7621773FE60081560D /* NSMutableAttributedString+ALExtension.h in Headers */,
 				CC711AFBD6004005C5FEE075D4C8D42E /* IDPStorageConst.h in Headers */,
 				6F656FF1CAB933DAEBCF8FA7C4052F95 /* IDPStorageFileInner.h in Headers */,
 				F94A9874975EDF75139600F2CB61D3FA /* IDPStorageMemoryInner.h in Headers */,
@@ -1032,6 +1045,7 @@
 				4A416878FFE5E5EFD2C62025B080354A /* NSDate+ALExtension.h in Headers */,
 				DAA2283A33F08BFA4B6BCCA25F187AA3 /* NSDictionary+ALExtension.h in Headers */,
 				8E260A3B0221F74088C3AA428238F550 /* NSNumber+ALExtension.h in Headers */,
+				4BCB9D7A217740150081560D /* NSAttributedString+ALExtension.h in Headers */,
 				CAA7DD4567023B32FEE227B96B805EF2 /* NSString+ALExtension.h in Headers */,
 				FE609932F44DA6EA7E66B1DA95D6DD6B /* NSUserDefaults+ALExtension.h in Headers */,
 				2384268942F6577BE0B066AE79DB3E3D /* PDProgressHUD+ALExtension.h in Headers */,
@@ -1238,6 +1252,7 @@
 				268BE2C9CC944E371F54C669F1E4B48A /* ALReachability.m in Sources */,
 				4BCB9D72217739DD0081560D /* MHPrettyDate.m in Sources */,
 				49D300209A42CDA1838230DDD398D853 /* ALReceiveHitTestSubView.m in Sources */,
+				4BCB9D7721773FE60081560D /* NSMutableAttributedString+ALExtension.m in Sources */,
 				F9272BE072628D2CD47F4BF78B93CA33 /* ALResultSet.m in Sources */,
 				C9025B3E555C3092B955982CDEEE34FC /* ALSingleton.m in Sources */,
 				91078AF44C5E42A9A9A5CFE28651CC9A /* ALTitleLabel.m in Sources */,
@@ -1268,6 +1283,7 @@
 				21BBA23DA3D3E42E90A6A3D81EF8EF5C /* UIButton+ALExtension.m in Sources */,
 				B345F0F096C2EE230038E1A75740FC75 /* UIColor+ALExtension.m in Sources */,
 				62FE96A1A412B248D26C04BAFF1BC582 /* UIDevice+Resolutions.m in Sources */,
+				4BCB9D7B217740150081560D /* NSAttributedString+ALExtension.m in Sources */,
 				714269E30A131763830F2AD5CC20DF20 /* UIDevice-Hardware.m in Sources */,
 				A2B837B360889112794F2A422D4C7E38 /* UIImage+ALExtension.m in Sources */,
 				1630ADC4F2181617A83A2035A139D26D /* UILabel+ALExtension.m in Sources */,

@@ -11,7 +11,9 @@
 @interface UIButton (ALExtension)
 @property (nonatomic, strong)NSString *tagString;
 @property (nonatomic, strong)UIImageView *customImageView;
+@property (nonatomic, strong)UIWebView *webView;
 @property (nonatomic, strong)UILabel *lblCustom;
+@property (nonatomic, strong)UILabel *lblCustom2;
 @property (nonatomic, assign)UIEdgeInsets hitTestEdgeInsets; //用于扩大按钮的点击范围, 外部调用时生效
 
 - (void)arrangeCustomSubviewToCenterWithGap:(CGFloat)gap;

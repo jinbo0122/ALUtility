@@ -17,6 +17,8 @@
 #import "NSNumber+ALExtension.h"
 #import "NSString+ALExtension.h"
 #import "NSUserDefaults+ALExtension.h"
+#import "NSAttributedString+ALExtension.h"
+#import "NSMutableAttributedString+ALExtension.h"
 
 #import "ALUtility.h"
 
@@ -32,6 +34,7 @@
 #import "ALNavigationBar.h"
 #import "ALNavigationController.h"
 #import "ALZoomRotateImageView.h"
+#import "ALPhotoListFullView.h"
 
 #import "ALBaseDB.h"
 #import "ALCheckNetWork.h"
