@@ -63,6 +63,7 @@
 #import "AGEmojiPageView.h"
 #import "AGEmojiKeyBoardView.h"
 #import "AGCancelTouchScrollView.h"
+#import "MHPrettyDate.h"
 
 #import "UIBarButtonItem+ALExtension.h"
 #import "UIButton+ALExtension.h"

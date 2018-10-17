@@ -12,6 +12,30 @@
 #import "NSArray+ALExtension.h"
 #import <AVFoundation/AVFoundation.h>
 @implementation NSString (ALExtension)
++ (NSString*)timeString:(NSString *)unixTime format:(MHPrettyDateFormat)format{
+  return [NSString time:[unixTime doubleValue] format:format];
+}
+
++ (NSString*)time:(NSTimeInterval)unixTime format:(MHPrettyDateFormat)format{
+  if (unixTime==0) {
+    return @"";
+  }
+  
+  NSDate *date = [NSDate dateWithTimeIntervalSince1970:unixTime];
+  NSString *timeString = [MHPrettyDate prettyDateFromDate:date
+                                               withFormat:format];
+  
+  if (format == MHPrettyDateShortRelativeTime && ![[timeString substringFromIndex:timeString.length-1] isEqualToString:@"前"]) {
+    timeString = [timeString stringByAppendingString:@"前"];
+  }
+  
+  if (timeString.length>0 && [timeString characterAtIndex:0] == '-') {
+    return [timeString substringFromIndex:1];
+  }
+  
+  return timeString;
+}
+
 + (NSString*)timeString:(NSTimeInterval)time{
   [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehaviorDefault];
   NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

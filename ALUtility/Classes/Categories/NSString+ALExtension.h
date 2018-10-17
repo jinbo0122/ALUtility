@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <UIKit/UIKit.h>
+#import "MHPrettyDate.h"
 typedef void(^COMPLETION_BLOCK_FilePath)(NSString *filePath, NSString *imgfilePath);
 @interface NSString (ALExtension)
++ (NSString*)timeString:(NSString *)unixTime format:(MHPrettyDateFormat)format;
++ (NSString*)time:(NSTimeInterval)unixTime format:(MHPrettyDateFormat)format;
+
 + (NSString*)timeString:(NSTimeInterval)time;
 + (NSString *)calendarWithWeekday:(NSTimeInterval)unixTime;
 + (NSString *)calendarString:(NSTimeInterval)unixTime;

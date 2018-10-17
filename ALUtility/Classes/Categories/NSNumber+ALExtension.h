@@ -13,4 +13,8 @@
 - (NSNumber *)decrement;
 - (NSNumber *)plus:(NSInteger)num;
 - (NSNumber *)minus:(NSInteger)num;
+
+- (NSString *)feedTimeString;
+- (NSString *)liveTimeString;
+- (NSString *)floatString;
 @end
