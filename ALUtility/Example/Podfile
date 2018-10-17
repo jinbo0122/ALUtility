@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'ALUtility_Example' do
-  pod 'ALUtility', :path => '../'
+  pod 'ALUtility', :path => '../../'
 #  pod 'SDWebImage'
   target 'ALUtility_Tests' do
     inherit! :search_paths

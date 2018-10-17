@@ -18,6 +18,7 @@
 #import "PDProgressHUD+ALExtension.h"
 #import "UIAlertController+ALExtension.h"
 #import "UIImage+ALExtension.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 @protocol ALZoomScrollViewDelegate;
 @interface ALZoomScrollView : UIScrollView<UIActionSheetDelegate>
 @property(nonatomic, strong)UIImageView *imageView;
@@ -170,14 +171,10 @@
       zoomImageView.zoomScale = 1.0;
       NSString *photoUrl = [photoList safeObjectAtIndex:i];
       if ([photoUrl rangeOfString:@"http"].location != NSNotFound) {
-//        [zoomImageView.imageView setImageWithURL:[photoList safeStringObjectAtIndex:i]
-//                                placeholderImage:nil
-//                                         options:ALWebImageRetryFailed
-//                                       retryTime:ALImageDownloadRetryTime
-//                                      wifiString:ALWifiImageAvatarBig
-//                                  noneWifiString:ALNoneWifiImageAvatarBig completionBlock:^(UIImage *image) {
-//                                    [hud hide:YES];
-//                                  }];
+        [zoomImageView.imageView sd_setImageWithURL:[[photoList safeStringObjectAtIndex:i] urlWithSuffix:ALWifiImageAvatarBig]
+                                          completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                                            [hud hide:YES];
+                                          }];
       }else{
         zoomImageView.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:photoUrl]];
       }

@@ -1,16 +1,25 @@
 PODS:
-  - ALUtility (0.1.0)
+  - ALUtility (0.3.5):
+    - SDWebImage (~> 4.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
-  - ALUtility (from `../`)
+  - ALUtility (from `../../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
 
 EXTERNAL SOURCES:
   ALUtility:
-    :path: "../"
+    :path: "../../"
 
 SPEC CHECKSUMS:
-  ALUtility: 0239c2541095dfbb60f1dbb3c4f5a54f236b948c
+  ALUtility: cf614cc07991b5f652fcd722d31154176ef4d72f
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: f446279769ad0b42d5208cea9f3d1e88ef09fd1c
+PODFILE CHECKSUM: de41f76325c2957297d5c8ae1152c63e0419d36a
 
 COCOAPODS: 1.5.3

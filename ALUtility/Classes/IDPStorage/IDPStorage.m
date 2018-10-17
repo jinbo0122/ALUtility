@@ -13,7 +13,7 @@
 #import "NSDictionary+ALExtension.h"
 #import "NSData+ALExtension.h"
 #import "NSString+ALExtension.h"
-
+#import <SDWebImage/UIImage+MultiFormat.h>
 typedef enum {
     IDPCacheObjectTypeData = 1,
     IDPCacheObjectTypeArray,
@@ -405,7 +405,7 @@ static dispatch_queue_t get_idp_asy_queue()
 
 -(UIImage*)parseImageObject:(NSData *)data
 {
-  return [UIImage imageWithData:data];
+  return [UIImage sd_imageWithData:data];
 }
 
 -(UIImage*)loadImageForKey:(NSString*)key error:(NSError**)error

@@ -1,8 +1,8 @@
 {
   "name": "ALUtility",
-  "version": "0.1.0",
-  "summary": "A short description of ALUtility.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.3.5",
+  "summary": "Project Starter for personal usage.",
+  "description": "It's a bunch of categories that make a project development easier",
   "homepage": "https://github.com/jinbo0122/ALUtility",
   "license": {
     "type": "MIT",
@@ -13,10 +13,30 @@
   },
   "source": {
     "git": "https://github.com/jinbo0122/ALUtility.git",
-    "tag": "0.1.0"
+    "tag": "0.3.5"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "ALUtility/Classes/**/*"
+  "prefix_header_contents": "#import \"ALExtension.h\"",
+  "source_files": "ALUtility/Classes/**/*.{h,m}",
+  "frameworks": [
+    "UIKit",
+    "Photos",
+    "CoreGraphics",
+    "ImageIO",
+    "AssetsLibrary",
+    "Security",
+    "QuartzCore",
+    "Foundation",
+    "SystemConfiguration",
+    "AVFoundation",
+    "WebKit"
+  ],
+  "libraries": "z",
+  "dependencies": {
+    "SDWebImage": [
+      "~> 4.0"
+    ]
+  }
 }
