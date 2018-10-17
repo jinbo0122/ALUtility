@@ -276,7 +276,7 @@
 		268AE3041CC129C3D8501518C4507660 /* NSString+ALExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+ALExtension.m"; sourceTree = "<group>"; };
 		275A8239118C79D5019F104815303EEB /* ALTitleLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALTitleLabel.h; sourceTree = "<group>"; };
 		2879EBCFF74A7821426C9BFEB910E12D /* PDProgressHUD+ALExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PDProgressHUD+ALExtension.m"; sourceTree = "<group>"; };
-		2B1BBFB9893AA1B1D5FE8B560A3D1315 /* ALUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ALUtility.framework; path = ALUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1BBFB9893AA1B1D5FE8B560A3D1315 /* ALUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC8AC23E72F6DEF85F9870486E9B5CA /* IDPStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IDPStorage.m; sourceTree = "<group>"; };
 		30D03175A5A9E06CC165EAC345E55B56 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		317261E76E4BB1CFC01AC43AD97226A5 /* Pods-ALUtility_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALUtility_Example-resources.sh"; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 		4C65D66620010E970CD549470C3D2415 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4E3981827086D0DF197A2E3637B1A555 /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Resolutions.h"; sourceTree = "<group>"; };
 		4E64590A4BAA94316A9EEF048136348A /* AGEmojiKeyBoardView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGEmojiKeyBoardView.m; sourceTree = "<group>"; };
-		4EA2FA271F618C9DB3D625A5C5C85243 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA2FA271F618C9DB3D625A5C5C85243 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F568156C286DB790A4A85ABA3819710 /* ALAutoScrollLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALAutoScrollLabel.m; sourceTree = "<group>"; };
 		4FAE7FC1667B818C6071EFF7AACB1691 /* UIView+SubView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+SubView.m"; sourceTree = "<group>"; };
 		54A305AEA5C5D1780CB280154F502118 /* ALReceiveHitTestSubView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALReceiveHitTestSubView.m; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 		64081714EF70226B44FF32FBEE006A7A /* Pods-ALUtility_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ALUtility_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		65F0DBBFEAA109A1A6BF5153CAA5A2CE /* ALDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALDatabaseQueue.h; sourceTree = "<group>"; };
 		67BF49CF3B6B209078220B96ACFA4034 /* ALCheckNetWork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALCheckNetWork.h; sourceTree = "<group>"; };
-		6BDA42C187ED0BF4381271CA863E882A /* Pods_ALUtility_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ALUtility_Example.framework; path = "Pods-ALUtility_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BDA42C187ED0BF4381271CA863E882A /* Pods_ALUtility_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALUtility_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CAB9A1531F2FFC942B0CAC4886F9764 /* ALUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALUtility.m; sourceTree = "<group>"; };
 		6D6DB300D005D011C4E832A3AE8010DB /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
 		6ED1DCABA12FE43D607CE93EDCEA7FC9 /* ALNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALNavigationController.m; sourceTree = "<group>"; };
@@ -372,8 +372,8 @@
 		8E7F986079B1F10E7BF47146906B5EA0 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		90898DD756A9DB5485D7A8E868A2E7B2 /* ALBaseDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALBaseDB.h; sourceTree = "<group>"; };
 		9187633E7D3B565B6DD18987CE547D8A /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
-		924607FF039922B8FEF3E648E5D7784D /* Pods_ALUtility_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ALUtility_Tests.framework; path = "Pods-ALUtility_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		924607FF039922B8FEF3E648E5D7784D /* Pods_ALUtility_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALUtility_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942409CD24271DF06F2D6E8A85F4132B /* NSDictionary+ALExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ALExtension.m"; sourceTree = "<group>"; };
 		957DE53A94031623728D3DF3AB2C4433 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
 		987D851DF60EF49F9CA1A17CAF63B135 /* UISegmentedControl+ALExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+ALExtension.h"; sourceTree = "<group>"; };
@@ -403,11 +403,11 @@
 		B770771C608F3B0FE3322A0BA03A5803 /* SDWebImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCodersManager.h; path = SDWebImage/SDWebImageCodersManager.h; sourceTree = "<group>"; };
 		B86F43FCAB9BF472DE987708876267BE /* PDProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PDProgressHUD.m; sourceTree = "<group>"; };
 		B8FA3C39653E472C9ABE856F96D231E4 /* UIBarButtonItem+ALExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ALExtension.h"; sourceTree = "<group>"; };
-		B9A54AE876E12156C550D7CF1F0A741E /* ALUtility.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ALUtility.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B9A54AE876E12156C550D7CF1F0A741E /* ALUtility.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = ALUtility.podspec; sourceTree = "<group>"; };
 		B9E503FE8D0B951DECBC2FE97C21230A /* PDProgressHUD+ALExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PDProgressHUD+ALExtension.h"; sourceTree = "<group>"; };
 		BFCB2FA80BF73867574B7239C7F3582C /* NSNumber+ALExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ALExtension.h"; sourceTree = "<group>"; };
 		BFD00E5BDED1658D1EC2246C274628A0 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
-		C03955459E5FA005213B56A8E208E687 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C03955459E5FA005213B56A8E208E687 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C174DEEFA3D723B6CE61252DA585FA15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C250368A03D775B5BA1EDC5414117CA8 /* ALBaseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALBaseVC.h; sourceTree = "<group>"; };
 		C2519523DDC7CA4964157E2728E2B1BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -430,7 +430,7 @@
 		D71C9A1CE70C55049350CBC0E5A89CE6 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
 		D777652FEAE2FBAF933A6BF0B4CCF528 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		DB381E4245493BCC1F2B44CAA7BF2CA4 /* ALTitleLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALTitleLabel.m; sourceTree = "<group>"; };
-		DB6441CC04A5C7D5A9A6DA8C2706DAC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DB6441CC04A5C7D5A9A6DA8C2706DAC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DCDC7A56D694A3EBB597FB41755C706F /* Pods-ALUtility_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALUtility_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DDE5FC602DF7E068BF5A8C2F3A9BC780 /* NSDate+ALExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+ALExtension.h"; sourceTree = "<group>"; };
 		E08CC3DDA3ACD0053FF3060AEA05932A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -694,7 +694,6 @@
 				778737FF0BD86A82CAFC9CF3C736CDE6 /* Core */,
 				322972850BE22D9B70E860AB9D7A4504 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
