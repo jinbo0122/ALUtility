@@ -43,4 +43,14 @@ typedef void(^COMPLETION_BLOCK_FilePath)(NSString *filePath, NSString *imgfilePa
 
 - (CGSize)sizeWithAttributes:(NSDictionary *)attrs constrainedToSize:(CGSize)size;
 - (CGSize)sizeWithAttributes:(NSDictionary *)attrs constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode;
+
+
+#pragma mark -
+- (NSString *)timeString;
+- (NSURL *)urlWithSuffix:(NSString *)suffix;
+- (NSURL *)url;
+- (BOOL)isValidPassword;
+- (BOOL)isAllDigits;
++ (BOOL)validateIDCardNumber:(NSString *)value;
+- (NSString*)urlDecodedString;
 @end

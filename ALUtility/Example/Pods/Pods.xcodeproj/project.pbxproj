@@ -125,6 +125,12 @@
 		4B68BD9A2175EB2C003992C4 /* ALDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BD182175EB2C003992C4 /* ALDatabaseQueue.h */; };
 		4B68BD9B2175EB2C003992C4 /* ALDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B68BD192175EB2C003992C4 /* ALDatabasePool.h */; };
 		4B68BD9C2175EB2C003992C4 /* ALDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68BD1A2175EB2C003992C4 /* ALDatabase.m */; };
+		4BCB9D6521772DDC0081560D /* ALButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB9D6321772DDC0081560D /* ALButtonItem.h */; };
+		4BCB9D6621772DDC0081560D /* ALButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB9D6421772DDC0081560D /* ALButtonItem.m */; };
+		4BCB9D6921772F050081560D /* ALPhotoListFullView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB9D6721772F050081560D /* ALPhotoListFullView.h */; };
+		4BCB9D6A21772F050081560D /* ALPhotoListFullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB9D6821772F050081560D /* ALPhotoListFullView.m */; };
+		4BCB9D6D217730680081560D /* UIAlertController+ALExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB9D6B217730670081560D /* UIAlertController+ALExtension.h */; };
+		4BCB9D6E217730680081560D /* UIAlertController+ALExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB9D6C217730680081560D /* UIAlertController+ALExtension.m */; };
 		501B02C61325D0581B81D42EFDF3B7D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		5D2FF6EEDD6A0DB21D3321DFA9C5404F /* ALUtility-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6083894E788E2304227D236940F2DED6 /* ALUtility-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90792BBE8C25C71706FCA3B9E7F69C24 /* Pods-ALUtility_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF34AAC2B8371C030C8F3F46C414152B /* Pods-ALUtility_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -272,6 +278,12 @@
 		4B68BD182175EB2C003992C4 /* ALDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDatabaseQueue.h; sourceTree = "<group>"; };
 		4B68BD192175EB2C003992C4 /* ALDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDatabasePool.h; sourceTree = "<group>"; };
 		4B68BD1A2175EB2C003992C4 /* ALDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDatabase.m; sourceTree = "<group>"; };
+		4BCB9D6321772DDC0081560D /* ALButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALButtonItem.h; sourceTree = "<group>"; };
+		4BCB9D6421772DDC0081560D /* ALButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALButtonItem.m; sourceTree = "<group>"; };
+		4BCB9D6721772F050081560D /* ALPhotoListFullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPhotoListFullView.h; sourceTree = "<group>"; };
+		4BCB9D6821772F050081560D /* ALPhotoListFullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPhotoListFullView.m; sourceTree = "<group>"; };
+		4BCB9D6B217730670081560D /* UIAlertController+ALExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ALExtension.h"; sourceTree = "<group>"; };
+		4BCB9D6C217730680081560D /* UIAlertController+ALExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ALExtension.m"; sourceTree = "<group>"; };
 		5970797C6CF3A403BC692DDFAB7DB70D /* ALUtility.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALUtility.xcconfig; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5A4AED1ABB6F45EA881160CE3EA60DDE /* Pods-ALUtility_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ALUtility_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -371,6 +383,8 @@
 		4B68BC902175EB2B003992C4 /* Subs */ = {
 			isa = PBXGroup;
 			children = (
+				4BCB9D6721772F050081560D /* ALPhotoListFullView.h */,
+				4BCB9D6821772F050081560D /* ALPhotoListFullView.m */,
 				4B68BC9B2175EB2B003992C4 /* ALAutoScrollLabel.h */,
 				4B68BCA92175EB2B003992C4 /* ALAutoScrollLabel.m */,
 				4B68BC932175EB2B003992C4 /* ALBaseTitleView.h */,
@@ -424,6 +438,8 @@
 		4B68BCCA2175EB2C003992C4 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				4BCB9D6321772DDC0081560D /* ALButtonItem.h */,
+				4BCB9D6421772DDC0081560D /* ALButtonItem.m */,
 				4B68BCCB2175EB2C003992C4 /* ALBaseDB.h */,
 				4B68BCD22175EB2C003992C4 /* ALBaseDB.m */,
 				4B68BCD02175EB2C003992C4 /* ALCheckNetWork.h */,
@@ -457,6 +473,8 @@
 				4B68BCEA2175EB2C003992C4 /* NSUserDefaults+ALExtension.m */,
 				4B68BCE22175EB2C003992C4 /* PDProgressHUD+ALExtension.h */,
 				4B68BCFC2175EB2C003992C4 /* PDProgressHUD+ALExtension.m */,
+				4BCB9D6B217730670081560D /* UIAlertController+ALExtension.h */,
+				4BCB9D6C217730680081560D /* UIAlertController+ALExtension.m */,
 				4B68BCF02175EB2C003992C4 /* UIBarButtonItem+ALExtension.h */,
 				4B68BCE02175EB2C003992C4 /* UIBarButtonItem+ALExtension.m */,
 				4B68BCDF2175EB2C003992C4 /* UIButton+ALExtension.h */,
@@ -660,6 +678,7 @@
 				4B68BD942175EB2C003992C4 /* ALDatabaseAdditions.h in Headers */,
 				4B68BD432175EB2C003992C4 /* IDPStorageSqliteInner.h in Headers */,
 				4B68BD322175EB2C003992C4 /* ALNavigationController.h in Headers */,
+				4BCB9D6921772F050081560D /* ALPhotoListFullView.h in Headers */,
 				4B68BD502175EB2C003992C4 /* IDPStorageFileInner.h in Headers */,
 				4B68BD772175EB2C003992C4 /* UIDevice-Hardware.h in Headers */,
 				4B68BD252175EB2C003992C4 /* ALAutoScrollLabel.h in Headers */,
@@ -682,10 +701,12 @@
 				4B68BD562175EB2C003992C4 /* ALCheckNetWork.h in Headers */,
 				4B68BD342175EB2C003992C4 /* ALUtility.h in Headers */,
 				4B68BD672175EB2C003992C4 /* PDProgressHUD+ALExtension.h in Headers */,
+				4BCB9D6D217730680081560D /* UIAlertController+ALExtension.h in Headers */,
 				4B68BD932175EB2C003992C4 /* ALResultSet.h in Headers */,
 				4B68BD452175EB2C003992C4 /* IDPStorageMemoryInner.h in Headers */,
 				4B68BD532175EB2C003992C4 /* PDProgressHUD.h in Headers */,
 				4B68BD2C2175EB2C003992C4 /* ALWebVC.h in Headers */,
+				4BCB9D6521772DDC0081560D /* ALButtonItem.h in Headers */,
 				4B68BD752175EB2C003992C4 /* UIBarButtonItem+ALExtension.h in Headers */,
 				4B68BD5A2175EB2C003992C4 /* ALKeyChain.h in Headers */,
 				4B68BD4A2175EB2C003992C4 /* IDPStorage.h in Headers */,
@@ -855,14 +876,17 @@
 				4B68BD4B2175EB2C003992C4 /* IDPStorageSqliteInner.m in Sources */,
 				4B68BD492175EB2C003992C4 /* IDPStorageFileInner.m in Sources */,
 				4B68BD922175EB2C003992C4 /* AGEmojiPageView.m in Sources */,
+				4BCB9D6621772DDC0081560D /* ALButtonItem.m in Sources */,
 				4B68BD2B2175EB2C003992C4 /* ALBaseTitleView.m in Sources */,
 				4B68BD7E2175EB2C003992C4 /* NSDate+ALExtension.m in Sources */,
 				4B68BD332175EB2C003992C4 /* ALAutoScrollLabel.m in Sources */,
 				4B68BD6F2175EB2C003992C4 /* NSUserDefaults+ALExtension.m in Sources */,
+				4BCB9D6A21772F050081560D /* ALPhotoListFullView.m in Sources */,
 				4B68BD702175EB2C003992C4 /* NSArray+ALExtension.m in Sources */,
 				4B68BD692175EB2C003992C4 /* UISegmentedControl+ALExtension.m in Sources */,
 				4B68BD7D2175EB2C003992C4 /* UIColor+ALExtension.m in Sources */,
 				B0EE4B5FD414931C12640FAB3A5876C8 /* ALUtility-dummy.m in Sources */,
+				4BCB9D6E217730680081560D /* UIAlertController+ALExtension.m in Sources */,
 				4B68BD4D2175EB2C003992C4 /* IDPCache.m in Sources */,
 				4B68BD4E2175EB2C003992C4 /* IDPConfig.m in Sources */,
 			);

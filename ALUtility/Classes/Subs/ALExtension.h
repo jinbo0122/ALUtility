@@ -39,6 +39,8 @@
 #import "PDProgressHUD.h"
 #import "SoundManager.h"
 
+#import "ALButtonItem.h"
+
 #import "IDPStorageConst.h"
 #import "IDPStorageProtocolInner.h"
 #import "IDPStorageSqliteInner.h"
@@ -76,4 +78,5 @@
 #import "UITableView+NoDataNotice.h"
 #import "UIView+ALExtension.h"
 #import "UIView+SubView.h"
+#import "UIAlertController+ALExtension.h"
 #endif /* ALExtension_h */
