@@ -11,4 +11,7 @@
 @interface ALLineView : UIView
 + (ALLineView *)lineWithFrame:(CGRect)frame colorHex:(UInt32)colorHex;
 + (ALLineView *)lineWithFrame:(CGRect)frame colorHex:(UInt32)colorHex alpha:(CGFloat)alpha;
++ (ALLineView *)lineWithFrame:(CGRect)frame colorHex:(UInt32)colorHex cornerRadius:(CGFloat)cornerRadius;
++ (ALLineView *)lineWithFrame:(CGRect)frame colorHex:(UInt32)colorHex layerRadius:(CGFloat)layerRadius;
++ (ALLineView *)lineWithFrame:(CGRect)frame colorHex:(UInt32)colorHex alpha:(CGFloat)alpha cornerRadius:(CGFloat)cornerRadius;
 @end
